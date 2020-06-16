@@ -1,0 +1,29 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>762</LabelID>
+    <LabelName>输出城市栏目列表</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>列表专用</LabelCate>
+    <LabelDesc />
+    <LabelParam>ParentID,1,1,节点ID|ShowNum,10,1,显示数</LabelParam>
+    <LabelTable>ZL_Node</LabelTable>
+    <LabelField>NodeID,NodeName</LabelField>
+    <LabelWhere>ParentID=@ParentID</LabelWhere>
+    <LabelOrder>OrderID ASC</LabelOrder>
+    <LabelContent>{Repeate}
+&lt;dl&gt;&lt;dt class="dt1"&gt;{Field="NodeName"/}&lt;/dt&gt; 
+ {ZL.Label id="输出友情链接列表" NodeID="{Field="NodeID"/}" ShowNum="@ShowNum" /}
+&lt;/dl&gt;{/Repeate}</LabelContent>
+    <LabelCount>1000</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</NewDataSet>

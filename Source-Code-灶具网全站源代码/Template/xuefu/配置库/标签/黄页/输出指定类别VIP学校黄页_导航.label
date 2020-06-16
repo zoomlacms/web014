@@ -1,0 +1,26 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>688</LabelID>
+    <LabelName>输出指定类别VIP学校黄页_导航</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>黄页</LabelCate>
+    <LabelDesc />
+    <LabelParam>ShowNum,10,1,显示数|TitleNum,30,1,标题长</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_Page left join {table1}.dbo.ZL_Reg_Page on {table1}.dbo.ZL_Page.UserID={table1}.dbo.ZL_Reg_Page.UserID</LabelTable>
+    <LabelField>ZL_Page.ID,Proname</LabelField>
+    <LabelWhere>Proname&lt;&gt;'' and type='{ZL.Label id="根据字典ID得到字典名" cate="2" gid="{$GetRequest(cate2)$}" /}' and CHARINDEX(ZL_Page.UserName,'{ZL.Label id="所有VIP会员名"/}')&gt;0 </LabelWhere>
+    <LabelOrder>{table1}.dbo.ZL_Page.CreateTime DESC</LabelOrder>
+    <LabelContent>{Repeate}&lt;a href="/Page/Default.aspx?pageid={Field="ID"/}" title="{Field="Proname"/}" target="_blank"&gt;{ZL:CutText({Field="Proname"/},@TitleNum,)/}&lt;/a&gt;{/Repeate}</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</NewDataSet>

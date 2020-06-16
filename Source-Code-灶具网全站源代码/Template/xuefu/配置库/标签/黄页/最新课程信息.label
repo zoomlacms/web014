@@ -1,0 +1,27 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>667</LabelID>
+    <LabelName>最新课程信息</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>黄页</LabelCate>
+    <LabelDesc />
+    <LabelParam>ShowNum,1,1,显示数|UserName,默认值,1,用户名</LabelParam>
+    <LabelTable>ZL_CommonModel left join ZL_Page_kcsz on ZL_CommonModel.ItemID=ZL_Page_kcsz.ID</LabelTable>
+    <LabelField>ZL_CommonModel.GeneralID,ZL_CommonModel.Hits,ZL_CommonModel.Title,ZL_Page_kcsz.kksj,ZL_Page_kcsz.xf</LabelField>
+    <LabelWhere>ZL_CommonModel.NodeID=2 And  ZL_CommonModel.Status=99 And ZL_CommonModel.TableName='ZL_Page_kcsz' And {table1}.dbo.ZL_CommonModel.Inputer='@UserName'</LabelWhere>
+    <LabelOrder>ZL_CommonModel.CreateTime DESC</LabelOrder>
+    <LabelContent>{Repeate}&lt;li&gt;&lt;a href="/page/PageContent.aspx?ItemID={Field="GeneralID"/}&amp;pageid={$GetRequest(pageid)$}"&gt; {Field="Title"/}&lt;/a&gt;&lt;/li&gt;{/Repeate}
+</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</NewDataSet>

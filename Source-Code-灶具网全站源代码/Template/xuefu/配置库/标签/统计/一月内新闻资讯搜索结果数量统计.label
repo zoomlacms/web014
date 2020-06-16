@@ -1,0 +1,26 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>744</LabelID>
+    <LabelName>一月内新闻资讯搜索结果数量统计</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>统计</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable>{table1}.dbo.ZL_CommonModel left join {table1}.dbo.ZL_C_Article on {table1}.dbo.ZL_CommonModel.ItemID={table1}.dbo.ZL_C_Article.ID</LabelTable>
+    <LabelField>count ( GeneralID ) as num</LabelField>
+    <LabelWhere>( NodeID=4 or FirstNodeID=4 ) and title like '%{$GetUrldecode({$GetRequest(Keyword)$})$}%' and datediff(month,[CreateTime],getdate())=0</LabelWhere>
+    <LabelOrder />
+    <LabelContent>{Field="num"/}</LabelContent>
+    <LabelCount>0</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</NewDataSet>

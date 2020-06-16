@@ -1,0 +1,32 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>538</LabelID>
+    <LabelName>问题分类</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>问答</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable>{table1}.dbo.ZL_Grade</LabelTable>
+    <LabelField>*</LabelField>
+    <LabelWhere>cate=2 and parentid=0</LabelWhere>
+    <LabelOrder />
+    <LabelContent>{Repeate}
+&lt;dl class="kn_b"&gt;
+&lt;dt&gt;&lt;a href="/Class_57/NodePage.aspx?bigclass={Field="GradeID"/}"&gt;{Field="GradeName"/}&lt;/a&gt;&lt;/dt&gt; 
+{ZL.Label id="问题小分类" parentid="{Field="GradeID"/}" /}
+&lt;/dl&gt;
+&lt;div class="clear"&gt;&lt;/div&gt;
+{/Repeate}       </LabelContent>
+    <LabelCount>10</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</NewDataSet>

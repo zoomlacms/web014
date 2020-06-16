@@ -1,0 +1,29 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>506</LabelID>
+    <LabelName>全站底部</LabelName>
+    <LabelType>1</LabelType>
+    <LabelCate>静态标签</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable />
+    <LabelField />
+    <LabelWhere />
+    <LabelOrder />
+    <LabelContent>&lt;div id="bottom"&gt;
+&lt;a href="{ZL:GetInfoUrl(13)/}"&gt;网站简介&lt;/a&gt;|&lt;a href="{ZL:GetNodeLinkUrl(4)/}"&gt;网站动态&lt;/a&gt;|&lt;a href="{ZL:GetInfoUrl(13)/}"&gt;商务合作&lt;/a&gt;|&lt;a href="{ZL:GetInfoUrl(15)/}"&gt;客服中心&lt;/a&gt;|&lt;a href="{ZL:GetNodeLinkUrl(36)/}" target="_blank"&gt;网站地图&lt;/a&gt;|&lt;a href="{ZL:GetInfoUrl(16)/}"&gt;用户协议&lt;/a&gt;|&lt;a href="{ZL:GetInfoUrl(17)/}"&gt;版权说明&lt;/a&gt;&lt;br/&gt;
+{$Copyright/}
+&lt;/div&gt;</LabelContent>
+    <LabelCount />
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</NewDataSet>

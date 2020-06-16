@@ -1,0 +1,26 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>755</LabelID>
+    <LabelName>根据用户ID得到黄页ID</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>黄页</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable>{table1}.dbo.ZL_PageReg</LabelTable>
+    <LabelField>ID</LabelField>
+    <LabelWhere>UserID={ZL:GetuserID()/}</LabelWhere>
+    <LabelOrder />
+    <LabelContent>{Field="ID"/}</LabelContent>
+    <LabelCount>10</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</NewDataSet>

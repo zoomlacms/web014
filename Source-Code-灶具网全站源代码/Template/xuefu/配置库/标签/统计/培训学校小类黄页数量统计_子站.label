@@ -1,0 +1,26 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>821</LabelID>
+    <LabelName>培训学校小类黄页数量统计_子站</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>统计</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable>ZL_PageReg left join ZL_Reg_Page on ZL_PageReg.UserID=ZL_Reg_Page.UserID</LabelTable>
+    <LabelField>count (infoID ) as num</LabelField>
+    <LabelWhere>(type like '%{ZL.Label id="根据字典ID得到字典名" cate="3" gid="{$GetRequest(cate2)$}" /}|{ZL.Label id="根据字典ID得到字典名" cate="3" gid="{$GetRequest(lei)$}" /}%') And ZL_Reg_Page.area like '%{$GetUrldecode({$GetRequest(city)$})$}%' And status=99</LabelWhere>
+    <LabelOrder />
+    <LabelContent>{Field="num"/}</LabelContent>
+    <LabelCount>0</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</NewDataSet>

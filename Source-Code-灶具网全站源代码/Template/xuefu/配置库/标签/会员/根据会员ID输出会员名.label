@@ -1,0 +1,32 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>769</LabelID>
+    <LabelName>根据会员ID输出会员名</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>会员</LabelCate>
+    <LabelDesc />
+    <LabelParam>UserID,1,1,会员 </LabelParam>
+    <LabelTable>{table1}.dbo.ZL_UserBase</LabelTable>
+    <LabelField>honeyName,UserFace</LabelField>
+    <LabelWhere>UserID=@UserID</LabelWhere>
+    <LabelOrder />
+    <LabelContent>&lt;script&gt;
+var f='{Field="UserFace"/}';
+if(f=='~/Images/userface/noface.gif'){
+document.write('&lt;img src="/Images/userface/noface.gif" alt="{Field="honeyName"/}" title="{Field="honeyName"/}"/&gt;');}
+else{
+document.write('&lt;img src="{Field="UserFace"/}" alt="{Field="honeyName"/}" title="{Field="honeyName"/}"/&gt;');}
+&lt;/script&gt;</LabelContent>
+    <LabelCount>1</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</NewDataSet>

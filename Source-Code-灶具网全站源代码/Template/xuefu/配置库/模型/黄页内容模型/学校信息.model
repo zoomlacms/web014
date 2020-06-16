@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <ModelID>29</ModelID>
+    <ModelName>学校信息</ModelName>
+    <Description />
+    <TableName>ZL_Page_xxxx</TableName>
+    <ItemName>信息</ItemName>
+    <ItemUnit>条</ItemUnit>
+    <ItemIcon>Default.gif</ItemIcon>
+    <ModelType>4</ModelType>
+    <ContentModule>/内容页/默认学校信息内容页.html</ContentModule>
+    <MultiFlag>true</MultiFlag>
+    <IsNull>false</IsNull>
+    <NodeID>0</NodeID>
+    <SysModel>1</SysModel>
+    <FromModel>0</FromModel>
+    <Thumbnail />
+    <Islotsize>false</Islotsize>
+  </Table>
+</NewDataSet>

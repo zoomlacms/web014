@@ -1,0 +1,32 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>540</LabelID>
+    <LabelName>用户积分排行榜</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>问答</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable>{table1}.dbo.ZL_User</LabelTable>
+    <LabelField>UserExp,UserID,UserName</LabelField>
+    <LabelWhere> UserName in (select PubUserName from ZL_Pub_ask) or UserName in (select PubUserName from ZL_Pub_answer)</LabelWhere>
+    <LabelOrder>UserExp DESC</LabelOrder>
+    <LabelContent>{Repeate}
+&lt;tr&gt;
+&lt;td width="8%" align=center class="gry"&gt;{ZL:jsq}&lt;/td&gt;
+&lt;td width="62%"&gt; {Field="UserName"/}&lt;/td&gt;
+&lt;td class="gry"&gt;{Field="UserExp"/}分&lt;/td&gt;
+&lt;/tr&gt;
+{/Repeate}</LabelContent>
+    <LabelCount>10</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</NewDataSet>

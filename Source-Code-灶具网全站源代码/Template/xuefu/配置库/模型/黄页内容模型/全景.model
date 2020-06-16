@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <ModelID>34</ModelID>
+    <ModelName>全景</ModelName>
+    <Description />
+    <TableName>ZL_Page_view</TableName>
+    <ItemName>全景</ItemName>
+    <ItemUnit>个</ItemUnit>
+    <ItemIcon>movie.gif</ItemIcon>
+    <ModelType>4</ModelType>
+    <ContentModule>/内容页/默认全景内容页.html</ContentModule>
+    <MultiFlag>true</MultiFlag>
+    <IsNull>false</IsNull>
+    <NodeID>0</NodeID>
+    <SysModel>1</SysModel>
+    <FromModel>0</FromModel>
+    <Thumbnail />
+    <Islotsize>false</Islotsize>
+  </Table>
+</NewDataSet>

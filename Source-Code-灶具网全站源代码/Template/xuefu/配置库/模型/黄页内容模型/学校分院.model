@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <ModelID>35</ModelID>
+    <ModelName>学校分院</ModelName>
+    <Description />
+    <TableName>ZL_Page_Branch</TableName>
+    <ItemName>分院</ItemName>
+    <ItemUnit>家</ItemUnit>
+    <ItemIcon>Stat.gif</ItemIcon>
+    <ModelType>4</ModelType>
+    <ContentModule>/内容页/默认学校分院内容页.html</ContentModule>
+    <MultiFlag>true</MultiFlag>
+    <IsNull>false</IsNull>
+    <NodeID>0</NodeID>
+    <SysModel>1</SysModel>
+    <FromModel>0</FromModel>
+    <Thumbnail />
+    <Islotsize>false</Islotsize>
+  </Table>
+</NewDataSet>

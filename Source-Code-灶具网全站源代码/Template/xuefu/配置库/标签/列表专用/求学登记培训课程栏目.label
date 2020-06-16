@@ -1,0 +1,28 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>644</LabelID>
+    <LabelName>求学登记培训课程栏目</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>列表专用</LabelCate>
+    <LabelDesc />
+    <LabelParam>Parentid,0,1,父栏目ID|ShowNum,30,1,调用数</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_Node</LabelTable>
+    <LabelField>NodeID,NodeName</LabelField>
+    <LabelWhere>Parentid=@Parentid</LabelWhere>
+    <LabelOrder>orderid asc</LabelOrder>
+    <LabelContent>{Repeate}
+&lt;option&gt;&lt;a href="{ZL:GetProposeinfo({Field="NodeID"/})/}"&gt;{Field="NodeName"/}&lt;/a&gt;&lt;/option&gt;
+{/Repeate}</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</NewDataSet>

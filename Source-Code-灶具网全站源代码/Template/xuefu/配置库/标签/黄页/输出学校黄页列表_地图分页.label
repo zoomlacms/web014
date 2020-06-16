@@ -1,0 +1,29 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>705</LabelID>
+    <LabelName>输出学校黄页列表_地图分页</LabelName>
+    <LabelType>4</LabelType>
+    <LabelCate>黄页</LabelCate>
+    <LabelDesc />
+    <LabelParam>ShowNum,10,1,显示数|TitleNum,30,1,标题长</LabelParam>
+    <LabelTable>ZL_PageReg left join ZL_Reg_Page on ZL_PageReg.UserID=ZL_Reg_Page.UserID</LabelTable>
+    <LabelField>ZL_PageReg.CompanyName,ZL_PageReg.ID,ZL_PageReg.LOGO,ZL_Reg_Page.address,ZL_Reg_Page.road,ZL_Reg_Page.tel,ZL_Reg_Page.map</LabelField>
+    <LabelWhere> ZL_Reg_Page.map&lt;&gt;'' And ( area like '%{ZL.Label id="根据字典ID得到字典名" cate="1" gid="{$GetRequest(area)$}" /}%' or '%[err:无记录]%' like '%{ZL.Label id="根据字典ID得到字典名" cate="1" gid="{$GetRequest(area)$}" /}%') And ( type like '%{ZL.Label id="根据字典ID得到字典名" cate="3" gid="{$GetRequest(lei)$}" /}%' or '%[err:无记录]%' like '%{ZL.Label id="根据字典ID得到字典名" cate="3" gid="{$GetRequest(lei)$}" /}%') And  ZL_PageReg.Status=99</LabelWhere>
+    <LabelOrder>ZL_PageReg.CreationTime DESC</LabelOrder>
+    <LabelContent>&lt;ul&gt;{Repeate}&lt;li&gt;&lt;a href="{ZL:GetLastinfo(219)/}?map={Field="map"/}&amp;area={$GetRequest(area)$}&amp;lei={$GetRequest(lei)$}" title="{Field="CompanyName"/}" target="_blank"&gt;{ZL:CutText({Field="CompanyName"/},@TitleNum,)/}&lt;/a&gt;&lt;br&gt;{Field="tel"/}&lt;br&gt;{Field="address"/}&lt;br&gt;{Field="road"/}&lt;/li&gt;&lt;div class="clear"&gt;&lt;/div&gt;
+{/Repeate}&lt;/ul&gt;
+&lt;div class="clear"&gt;&lt;/div&gt;
+{ZL.Page id="搜索分页"/}</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</NewDataSet>

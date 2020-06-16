@@ -1,0 +1,31 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>793</LabelID>
+    <LabelName>输出推荐黄页学校图片_带标题_子站</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>子站</LabelCate>
+    <LabelDesc />
+    <LabelParam>ShowNum,10,1,调用信息数|city,1,1,城市</LabelParam>
+    <LabelTable>ZL_PageReg left join ZL_Reg_Page on ZL_PageReg.UserID=ZL_Reg_Page.UserID</LabelTable>
+    <LabelField>ZL_PageReg.CompanyName,ZL_PageReg.ID,ZL_PageReg.LOGO</LabelField>
+    <LabelWhere>type like '%{ZL.Label id="根据字典ID得到字典名" cate="2" gid="{$GetRequest(cate2)$}" /}%'  And  ZL_Reg_Page.area like '%@city%' And ZL_PageReg.Status=99</LabelWhere>
+    <LabelOrder>ZL_PageReg.CreationTime DESC</LabelOrder>
+    <LabelContent>{Repeate}
+&lt;li&gt;&lt;a href="/Page/Default.aspx?pageid={Field="ID"/}" title="{Field="CompanyName"/}" target="_blank"&gt;
+&lt;img src="{ZL:GetPicUrl({Field="LOGO"/})/}" width="130" height="100" alt="{Field="CompanyName"/}"/&gt;&lt;/a&gt;
+&lt;br/&gt;&lt;a href="/Page/Default.aspx?pageid={Field="ID"/}" title="{Field="CompanyName"/}" target="_blank"&gt;
+{ZL:CutText({Field="CompanyName"/},@TitleNum,)/}&lt;/a&gt;&lt;/li&gt;
+{/Repeate}</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</NewDataSet>

@@ -1,0 +1,44 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>欢迎访问{$SiteTitle/}_首页</title>
+<link href="{$CssDir/}global.css" rel="stylesheet" type="text/css" /> 
+{$MetaKeywords/}
+{$MetaDescription/}
+{ZL:HTML5()/}
+</head>
+<body style=" background:none">
+  <div  style="background:#fafafa;border:1px solid #ccc;">
+   <div id="head">
+<div id="logo"><a href="/"><img src="{$LogoUrl/}" alt="{$SiteName/}" /></a></div>
+ 
+<div id="head_r"> 
+<a href="/user/" style="background:url({$CssDir/}images/user.gif) left no-repeat;">会员登录</a>
+<a onclick="this.style.behavior='url(#default#homepage)'; this.setHomePage('{$SiteURL/}');" style="background:url({$CssDir/}images/home.gif) left no-repeat; cursor:pointer;">设为首页</a>
+<a onclick="javascript:window.external.AddFavorite('{$SiteURL/}','{$SiteTitle/}')" title="收藏本站到你的收藏夹" style="background:url({$CssDir/}images/love.gif) left no-repeat; cursor:pointer;">加入收藏</a><br/>
+<span>
+<form action="/Class_4/NodeElite.aspx" method="get">
+<input type="text" onclick="setEmpty(this)" onblur="settxt(this)" name="Keyword" id="Keyword" value="请输入关键字">
+<input type="submit" id="btnSearch" name="Search" name="button" value="搜索">
+</form>
+</span>
+</div>
+</div><div class="clear"></div></div>
+  
+<!--频道首页主体开始 -->
+<div id="main">
+<div class="e_city" >热点城市选择：<a href="/index.html">主站</a><a href="http://nj.xuefu.cc" target="_blank">南京</a> <a href="#" target="_blank">常州</a><a href="http://123.xuefu.cc" target="_blank">网址导航</a></div>
+  
+<div class="clear"></div>
+<div class="citylist" style="float:left;">
+<p>请选择您所在的城市：</p>
+ {ZL.Label id="输出城市栏目列表" ParentID="222" ShowNum="100" /}
+ </div><div class="clear"></div></div>
+ <div id="bottom">
+<a href="{ZL:GetInfoUrl(13)/}">网站简介</a> | <a href="{ZL:GetNodeLinkUrl(4)/}">网站动态</a> | <a href="{ZL:GetInfoUrl(13)/}">商务合作</a> | <a href="{ZL:GetInfoUrl(15)/}">客服中心</a> | <a href="{ZL:GetNodeLinkUrl(36)/}" target="_blank">网站地图</a> | <a href="{ZL:GetInfoUrl(16)/}">用户协议</a> | <a href="{ZL:GetInfoUrl(17)/}">版权说明</a><br/>
+{$Copyright/}
+</div>
+ 
+ </body>
+</html> 

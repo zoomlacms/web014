@@ -1,0 +1,28 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>654</LabelID>
+    <LabelName>首页学习分类数据字典</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>字典</LabelCate>
+    <LabelDesc />
+    <LabelParam>Cate,2,1,类|ParentID,389,1,父id|ShowNum,10,1,显示数|NodeID,2,1,节点ID</LabelParam>
+    <LabelTable>ZL_Grade left join ZL_Node on ZL_Grade.GradeName=ZL_Node.NodeName</LabelTable>
+    <LabelField>ZL_Grade.GradeID,ZL_Grade.GradeName,ZL_Grade.ParentID</LabelField>
+    <LabelWhere>Cate=@Cate and ZL_Grade.ParentID=@ParentID</LabelWhere>
+    <LabelOrder>GradeID ASC</LabelOrder>
+    <LabelContent>{Repeate}&lt;div class="clear"&gt;&lt;b&gt;&lt;a href="/Class_@NodeID/default.aspx?cate2={$GetUrlencode({Field="GradeID"/})$}"&gt;{Field="GradeName"/}&lt;/a&gt;&lt;/b&gt;
+&lt;p&gt;{ZL.Label id="首页学习分类小类数据字典" pid="{Field="GradeID"/}" cate="2" ShowNum="10" NodeID="@NodeID" /}&lt;/p&gt;
+&lt;/div&gt;{/Repeate}</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</NewDataSet>

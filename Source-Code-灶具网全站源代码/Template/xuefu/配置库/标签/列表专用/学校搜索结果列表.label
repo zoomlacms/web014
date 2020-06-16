@@ -1,0 +1,42 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>525</LabelID>
+    <LabelName>学校搜索结果列表</LabelName>
+    <LabelType>4</LabelType>
+    <LabelCate>列表专用</LabelCate>
+    <LabelDesc />
+    <LabelParam>NodeID,2,1,节点ID|ShowNum,10,1,显示数</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_CommonModel left join {table1}.dbo.ZL_C_school on {table1}.dbo.ZL_CommonModel.ItemID={table1}.dbo.ZL_C_school.ID</LabelTable>
+    <LabelField>ZL_CommonModel.GeneralID,ZL_CommonModel.NodeID,ZL_CommonModel.Title,ZL_C_school.address,ZL_C_school.area,ZL_C_school.course,ZL_C_school.schoollogo</LabelField>
+    <LabelWhere>(ZL_CommonModel.NodeID=@NodeID OR ZL_CommonModel.FirstNodeID=@NodeID ) And ZL_CommonModel.Status=99 And {table1}.dbo.ZL_CommonModel.Title like '%{$PostRequest(keyword)$}%'</LabelWhere>
+    <LabelOrder>ZL_CommonModel.OrderID DESC</LabelOrder>
+    <LabelContent>{Repeate}
+&lt;div class="list_m1"&gt;
+&lt;div class="lim1_L"&gt;&lt;a href="{ZL:GetInfoUrl({Field="GeneralID"/})/}" target="{ZL:GetInfoOpen({Field="NodeID"/})/}"&gt;&lt;img src="{ZL:GetPicUrl({Field="schoollogo"/})/}"&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div class="lim1_M"&gt;
+&lt;a href="{ZL:GetInfoUrl({Field="GeneralID"/})/}" target="{ZL:GetInfoOpen({Field="NodeID"/})/}"&gt;{Field="Title"/}&lt;/a&gt;&lt;br/&gt;
+&lt;p&gt;地址：{Field="address"/}&lt;br/&gt;主营：雅思培训&lt;br/&gt;&lt;a href="{ZL:GetInfoUrl({Field="GeneralID"/})/}" target="{ZL:GetInfoOpen({Field="NodeID"/})/}"&gt;课程列表&lt;/a&gt;|&lt;a href="{ZL:GetInfoUrl({Field="GeneralID"/})/}" target="{ZL:GetInfoOpen({Field="NodeID"/})/}"&gt;查看点评&lt;/a&gt;|&lt;a href="#"&gt;机构介绍&lt;/a&gt;&lt;/p&gt;
+&lt;span&gt;课程：{Field="course"/}&lt;a href="{ZL:GetInfoUrl({Field="GeneralID"/})/}" target="{ZL:GetInfoOpen({Field="NodeID"/})/}"&gt;更多&gt;&gt;&lt;/a&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="lim1_R"&gt;
+&lt;div class="lim1RL"&gt;&lt;span&gt;0%好评&lt;/span&gt;&lt;br/&gt;&lt;img src="{$CssDir/}images/scor4.jpg"&gt;&lt;br/&gt;&lt;b&gt;0&lt;/b&gt;条网友点评&lt;/div&gt;
+&lt;div class="lim1RR"&gt;信用：100&lt;br/&gt;&lt;a href="#"&gt;&lt;img src="{$CssDir/}images/bott3.jpg"&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="clear"&gt;&lt;/div&gt;
+&lt;/div&gt;
+{/Repeate}
+&lt;div class="clear"&gt;&lt;/div&gt;
+{ZL.Page/}</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</NewDataSet>

@@ -1,0 +1,227 @@
+{ZL.Source id="节点栏目信息数据源"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="节点栏目信息数据源" FD="Meta_Keywords" page="0"/}" />
+<meta name="description" content="{SField sid="节点栏目信息数据源" FD="Meta_Description" page="0"/}" />
+<link href="{$CssDir/}global.css" rel="stylesheet" type="text/css" /> 
+{ZL:HTML5()/}
+<script src="/js/jquery-1.5.1.min.js" type="text/javascript"></script>
+<script src="/js/scrolltopcontrol.js" type="text/javascript"></script>
+<script src="/js/jquery.lazyload.js" type="text/javascript"></script>
+<script src="{$CssDir/}/js/slid.js"></script>
+<script src="{$CssDir/}/js/scrollDoor.js"></script>
+<script>
+window.onload = function(){
+var SDmodel = new scrollDoor();
+SDmodel.sd(["m01","m02"],["c01","c02"],"sd01","sd02");
+}
+</script>
+<style type="text/css">
+#nav #Menu1 a{ color:#fff; text-decoration:none; background:url({$CssDir/}images/n_on.jpg) no-repeat;}
+</style>
+</head>
+<body>
+{ZL.Label id="全站头部"/}
+<div id="position"><b>您的位置：</b><a href="/">{$SiteName/}</a>>>{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}</div>
+<div id="course">
+<div id="course_l">
+<div id="latest_l">
+<div class="scrolldoorFrame">
+<ul class="scrollUl">
+<li class="sd01" id="m01">推荐课程</li>
+<li class="sd02" id="m02">推荐学校</li>
+<div class="clear"></div></ul>
+<div class="bor03 cont1  school_con">
+<div id="c01">
+<ul>
+{ZL.Label id="企业认证推荐课程信息列表" ShowNum="8" /}
+</ul>
+</div>
+<div id="c02" class="hidden">
+<ul>
+{ZL.Label id="企业认证学校黄页列表" ShowNum="10" TitleNum="26" /}
+</ul>
+</div>
+</div><!-- bor03 end -->
+<div class="container">
+<slid imgUrl="{ZL.Label id="推荐图片新闻" NodeID="4" ShowNum="5" /}" 
+type="slidB" 
+title="{ZL.Label id="推荐图片新闻标题" NodeID="4" ShowNum="5" TitleNum="20" /}" 
+linkUrl="{ZL.Label id="推荐图片新闻链接" NodeID="4" ShowNum="5" /}" width="265" height="215"/>
+</div><div class="clear"></div>
+<!--此处可显示五(A-E)种自由广告效果，分别同slidA-slidE，用到得js:slid.js,css:public.css，智能标签调用方法与解析详见bbs.zoomla.cn/showtopic-22458.aspx-->
+</div>
+</div>
+<div id="course_ll">
+<div class="m_title"><strong>学习资料</strong></div>
+<div class="course_lc">
+<div class="course_le">
+<div class="ma_title t1"><a href="{ZL:GetNodeLinkUrl(26)/}?cate2=389">外语培训</a></div>
+<div class="count">
+<span class="pink"><a href="/Class_26/NodePage.aspx?cate2=399&majoy=410">新概念</a></span><span class="green"><a href="/Class_26/NodePage.aspx?cate2=399&majoy=409">托福</a></span><span class="oringe"><a href="/Class_26/NodePage.aspx?cate2=399&majoy=412">商务英语</a></span><br/>
+<ul>{ZL.Label id="二级数据字典" Cate="2" ParentID="389" ShowNum="20" NodeID="26" /}</ul>
+<div class="clear"></div>
+</div>
+</div><!-- course_le end -->
+
+<div class="course_lr">
+<div class="ma_title t1"><a href="{ZL:GetNodeLinkUrl(31)/}?cate2=394">学历教育</a></div>
+<div class="count">
+<span class="green"><a href="/Class_31/NodePage.aspx?cate2=510&majoy=520">自考本科</a></span>
+<span class="oringe"><a href="/Class_31/NodePage.aspx?cate2=509&majoy=518">专升本</a></span><br/>
+<ul>
+  {ZL.Label id="二级数据字典" Cate="2" ParentID="394" ShowNum="20" NodeID="31" /}
+ </ul>
+</div>
+<div class="clear"></div>
+</div><!-- course_lr end -->
+<div class="clear"></div>
+</div><!-- course_lc 循环块结束 -->
+
+
+<div class="course_lc">
+<div class="course_le">
+<div class="ma_title t2"><a href="{ZL:GetNodeLinkUrl(27)/}?cate2=390">电脑/IT</a></div>
+<div class="count">
+<span class="pink"><a href="/Class_27/NodePage.aspx?cate2=425&majoy=439">影视动画</a></span><span class="green"><a href="/NodePage.aspx?cate2=426&majoy=445">手绘</a></span><span class="oringe"><a href="/Class_27/NodePage.aspx?cate2=427&majoy=458">工程制图cad</a></span><span class="pink"><a href="/Class_27/NodePage.aspx?cate2=425&majoy=443">flash动画</a></span><br/>
+<ul>
+  {ZL.Label id="二级数据字典" Cate="2" ParentID="390" ShowNum="20" NodeID="27" /}
+</ul>
+<div class="clear"></div>
+</div>
+</div><!-- course_le end -->
+
+<div class="course_lr">
+<div class="ma_title t2"><a href="{ZL:GetNodeLinkUrl(33)/}?cate2=396">出国留学</a></div>
+<div class="count">
+<span class="oringe"><a href="/Class_33/NodePage.aspx?cate2=653&majoy=655">法国留学</a></span><span class="green"><a href="/Class_33/NodePage.aspx?cate2=654&majoy=664">新加坡留学</a></span><br/>
+<ul>
+  {ZL.Label id="二级数据字典" Cate="2" ParentID="396" ShowNum="20" NodeID="33" /}
+</li></ul>
+</div>
+<div class="clear"></div>
+</div><!-- course_lr end -->
+
+<div class="clear"></div>
+</div><!-- course_lc 循环块结束 -->
+
+<div class="course_lc">
+<div class="course_le">
+<div class="ma_title t3"><a href="{ZL:GetNodeLinkUrl(28)/}?cate2=391">职业技能</a></div>
+<div class="count">
+<span class="pink"><a href="/Class_28/NodePage.aspx?cate2=461&majoy=588">化妆</a></span>
+<span class="green"><a href="/Class_28/NodePage.aspx?cate2=461&majoy=589">美甲</a></span>
+<span class="oringe"><a href="/Class_28/NodePage.aspx?cate2=464&majoy=604">调酒</a></span>
+<span class="green"><a href="/Class_28/NodePage.aspx?cate2=462&majoy=597">服装画技法</a></span>
+<span class="pink"><a href="/Class_28/NodePage.aspx?cate2=460&majoy=584">汽车美容</a></span><br/>
+<ul>
+  {ZL.Label id="二级数据字典" Cate="2" ParentID="391" ShowNum="20" NodeID="28" /}
+</ul>
+<div class="clear"></div>
+</div>
+</div><!-- course_le end -->
+
+<div class="course_lr">
+<div class="ma_title t3"><a href="{ZL:GetNodeLinkUrl(35)/}?cate2=398">公务员</a></div>
+<div class="count">
+<span class="green"><a href="/Class_35/default.aspx?cate2=492">大学生村官</a></span><br/>
+<ul>
+  {ZL.Label id="二级数据字典" Cate="2" ParentID="398" ShowNum="20" NodeID="35" /}
+</ul>
+</div>
+<div class="clear"></div>
+</div><!-- course_lr end -->
+<div class="clear"></div>
+</div><!-- course_lc 循环块结束 -->
+
+<div class="course_lc">
+<div class="course_le">
+<div class="ma_title t1"><a href="{ZL:GetNodeLinkUrl(392)/}?cate2=392">资格认证</a></div>
+<div class="count">
+<span class="oringe"><a href="/Class_29/NodePage.aspx?cate2=468&majoy=626">高级会计师</a></span>
+<span class="green"><a href="/Class_29/NodePage.aspx?cate2=470&majoy=648">国际商务师</a></span><br/>
+<ul>
+  {ZL.Label id="二级数据字典" Cate="2" ParentID="392" ShowNum="20" NodeID="29" /}
+</ul>
+<div class="clear"></div>
+</div>
+</div><!-- course_le end -->
+
+<div class="course_lr">
+<div class="ma_title t1"><a href="{ZL:GetNodeLinkUrl(30)/}?cate2=393">文体艺术</a></div>
+<div class="count">
+<span class="pink"><a href="/Class_30/NodePage.aspx?cate2=503&majoy=530">钢琴</a></span>
+<span class="green"><a href="/Class_30/NodePage.aspx?cate2=503&majoy=533">古筝</a></span><br/>
+<ul>
+  {ZL.Label id="二级数据字典" Cate="2" ParentID="393" ShowNum="20" NodeID="30" /}
+</ul>
+</div>
+<div class="clear"></div>
+</div><!-- course_lr end -->
+<div class="clear"></div>
+</div><!-- course_lc 循环块结束 -->
+
+
+<div class="course_lc">
+
+<div class="course_le">
+<div class="ma_title t2"><a href="{ZL:GetNodeLinkUrl(30)/}?cate2=395">研修管理</a></div>
+<div class="count">
+<span class="oringe"><a href="/Class_32/default.aspx?cate2=485">MBA/EMBA</a></span><br/>
+<ul>
+  {ZL.Label id="二级数据字典" Cate="2" ParentID="395" ShowNum="20" NodeID="32" /}
+</li></ul>
+<div class="clear"></div>
+</div>
+</div><!-- course_le end -->
+
+<div class="course_lr">
+<div class="ma_title t2"><a href="{ZL:GetNodeLinkUrl(34)/}?cate2=397">补习辅导</a></div>
+<div class="count">
+<span class="green"><a href="/Class_34/NodePage.aspx?cate2=666&majoy=669">中考数学</a></span>
+<span class="pink"><a href="/Class_34/NodePage.aspx?cate2=667&majoy=671">理综</a></span><br/>
+<ul>
+  {ZL.Label id="二级数据字典" Cate="2" ParentID="397" ShowNum="20" NodeID="34" /}
+</ul>
+</div>
+<div class="clear"></div>
+</div><!-- course_lr end -->
+
+<div class="clear"></div>
+</div><!-- course_lc 循环块结束 -->
+
+</div>
+
+<div id="image">
+<div class="cate_tt"><b>推荐图文</b></div>
+<ul class="imagelist">
+{ZL.Label id="输出推荐黄页学校图片_带标题" NodeID="2" TitleNum="20" ShowNum="4" /}
+</ul>
+<div class="clear"></div>
+</div><!-- image end -->
+
+</div><!-- 左边结束 -->
+
+<div id="course_r">
+<div class="recommend es_list" style="margin-top:0px;">
+<div class="recommend_t"><strong>推荐名校</strong></div>
+<ul>
+{ZL.Label id="输出学校黄页列表" ShowNum="10" TitleNum="30" /}
+ </ul>
+</div>
+<div class="course_pic"><script type="text/javascript" src="{$AdDir/}/201205/2.js"></script></div>
+<div class="recommend">
+<div class="recommend_t"><strong>{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}</strong></div>
+<p>{SField sid="节点栏目信息数据源" FD="Description" page="0"/}</p>
+</div>
+<div class="course_pic"><script type="text/javascript" src="{$AdDir/}/201205/1.js"></script></div>
+<div class="course_pic"><script type="text/javascript" src="{$AdDir/}/201205/3.js"></script></div>
+</div>
+<div class="clear"></div>
+</div>
+{ZL.Label id="全站底部"/}
+</body>
+</html>

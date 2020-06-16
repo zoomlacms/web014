@@ -1,0 +1,29 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>772</LabelID>
+    <LabelName>学校内互动问答调用标签</LabelName>
+    <LabelType>4</LabelType>
+    <LabelCate>互动标签</LabelCate>
+    <LabelDesc>ZL_Pub_askschool分页标签</LabelDesc>
+    <LabelParam />
+    <LabelTable>{table1}.dbo.ZL_Pub_askschool</LabelTable>
+    <LabelField>PubAddTime,PubContent,PubTitle,PubUserID,PubContentid,ID</LabelField>
+    <LabelWhere>ZL_Pub_askschool.Pubupid=10 And ZL_Pub_askschool.PubContentid={$GetRequest(Pageid)$} And ZL_Pub_askschool.Pubstart=1 And wtid=''</LabelWhere>
+    <LabelOrder>ZL_Pub_askschool.ID DESC</LabelOrder>
+    <LabelContent>&lt;ul&gt;
+{Repeate}&lt;li&gt;{ZL.Label id="根据会员ID输出会员名" UserID="{Field="PubUserID"/}" /}&lt;p&gt;主题：{Field="PubTitle"/}   时间:{Field="PubAddTime"/}&lt;br&gt;内容:{Field="PubContent"/}&lt;/p&gt;&lt;/li&gt;{ZL.Label id="学校内互动回答" PubContentid="{Field="ID"/}" /}
+{/Repeate}&lt;/ul&gt;
+{ZL.Page/}</LabelContent>
+    <LabelCount>10</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</NewDataSet>

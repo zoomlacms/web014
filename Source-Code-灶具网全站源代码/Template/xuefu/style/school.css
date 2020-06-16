@@ -1,0 +1,138 @@
+﻿@charset "utf-8";
+/* 全局样式定义 Powered by zoomla.cn */
+*{margin:0px; padding:0px;}
+body{font-size:12px; font-family:Arial, Helvetica, sans-serif, ; background:#ECECEC;)
+}
+img{border:none;}
+li{list-style-type:none;}
+a{color:#333; text-decoration:none;}
+a:hover{text-decoration:none;color:#CC0000;}
+.hidden{ display:none;}
+.clear,.gcl{clear:both;}
+.pink a{ color:#F39}
+.green a{ color:#063;}
+.oringe a{ color:#F60}
+ 
+#top,#head,#banner,#school,#school_course,#school_all{width:960px;margin:0px auto; clear:both; background:#fff;}
+#top { background:url(images/school/top_bg.jpg) repeat-x; height:27px; line-height:27px;}
+#top span{ float:right; margin-right:10px;}
+#top span a{ margin:0px 10px;}
+#head{ font-size:25px; font-family:"微软雅黑"; line-height:120px; background:url(images/school/body_bg.jpg) no-repeat center top;}
+#head a{ margin-left:15px;}
+#naver{ height:60px; background:url(images/school/naver.jpg) bottom repeat-x;}
+#nav{ width:984px;margin:0px auto; clear:both; height:60px; background:url(images/school/nav.jpg) no-repeat;}
+#nav ul{ padding-left:40px; padding-top:17px;}
+#nav li{ line-height:40px; float:left; width:83px; text-align:center; font-size:14px; background:none; font-weight:normal; padding-left:0px;}
+#nav li a{ color:#f7ddad}
+#nav li a:hover{ color:#fff; text-decoration:underline; background:none;}
+#banner,#school{ padding-top:8px;}
+#banner img{ width:960px; height:115px;}
+#school{ background:#fff;}	
+#school_l{ float:left; width:250px; margin-left:15px;_margin-left:8px;}
+#school_r{ float:right; width:670px;margin-right:15px;_margin-right:8px;}
+.school_basic{ position:relative;  border:1px solid #ccc; line-height:30px; padding-bottom:10px;}
+.school_basic_t{ border-bottom:1px solid #C00; height:30px; line-height:30px; padding-left:10px;}
+.shool_tel{ width:90%; position:absolute; bottom:5px; left:10px; height:35px; line-height:35px; background:url(images/school/tel.gif) no-repeat; padding-left:40px; color:#666;}
+.school_basic_t span{ float:right; color:#f00; margin-right:10px;}
+.school_basic_t span a{ color:#333}
+.school_basic p strong{ color:#E73329	}
+.school_basic p{ border-bottom:1px dashed #ccc; padding-left:10px;}
+.school_basic span{ margin-left:10px;}
+
+.school_sym{ width:430px;  height:235px;float:left; border:1px solid #ccc; line-height:25px;}
+.school_n{  height:235px;float:right; width:225px; border:1px solid #ccc; }
+.school_sym img{ width:150px; height:140px; float:left; border:1px solid #ccc; margin:10px; padding:5px;}
+.school_sym p{ margin-top:10px; margin-left:10px;}
+.school_n li{ line-height:25px; background:url(images/hd.jpg) no-repeat 5px; padding-left:15px; }
+.school_sym a{ color:#f00; margin-left:10px;}
+.school_rz{ border:1px solid #ccc;  margin-top:10px;}
+.school_rz ul{ margin:10px;}
+.school_rz li{ height:30px; line-height:30px; margin-left:10px;}
+.school_rz li img{ float:left; margin-right:10px; margin-top:3px;}
+.school_p { border:1px solid #ccc; margin-top:10px; height:110px;}
+.school_p li{ float:left; width:95px; height:80px; text-align:center; }
+.school_p li  img{ width:80px; height:70px; line-height:25px; margin-top:4px;}
+
+#school_course{ background:#fff; padding-top:10px;}
+#school_coursel{ float:left; width:660px;border:1px solid #ccc; margin-left:15px;_margin-left:8px;}
+#school_courser{ float:right;width:250px;border:1px solid #ccc;margin-right:15px;_margin-right:8px;}
+#school_coursel ul{ margin:10px}
+#school_coursel li{ line-height:25px; background:url(images/li_bgg.gif) 5px no-repeat; padding-left:15px; border-bottom:1px solid #ccc;}
+#school_coursel li span{ float:right; margin-right:50px;}
+#school_coursel li span a{ color:#185998}
+
+#school_all{ background:#fff; padding-top:10px;}
+#school_alll{ float:left; width:220px; margin-left:15px;}
+#school_allr{ float:right; width:670px; margin-right:15px;}
+.school_tel{ border:1px solid #ccc; margin-top:5px;   line-height:30px; padding:20px 10px;}
+.school_tel_t{ height:30px; line-height:30px; background:url(images/school/cont.jpg) left no-repeat; padding-left:40px; font-family:"微软雅黑"; font-size:14px; border-bottom:1px solid #ccc;}
+.school_search_t{ height:35px; line-height:35px; background:url(images/school/search.jpg) no-repeat left bottom; padding-left:40px; border-bottom:1px solid #ccc; font-size:14px; font-family:"微软雅黑"}
+.school_search{ margin-top:40px; line-height:26px; padding-left:10px;}
+.mysite{ height:25px; line-height:25px; border-bottom:1px solid #ccc;}
+.school_syms{ line-height:25px; text-indent:20px; padding-bottom:20px;}
+.school_syms li{ line-height:30px; background:url(images/school/ico.jpg) 5px no-repeat; border-bottom:1px #ccc dotted;}
+.school_syms li span{ float:right; color:#666; padding-right:10px;}
+#bottom{background:#F7F7F7; margin-top:10px; color:#666; width:100%; height:90px; padding-top:10px; line-height:24px; text-align:center; border-top:2px solid #2587B6}
+#bottom a{margin-left:10px; margin-right:10px;}
+.school_syms  img{ width:650px;}
+.school_syms table{ border-collapse:collapse}
+.school_syms td a{ color: #C00;}
+.school_syms th{ text-align:left; border-bottom:1px solid #eee;line-height:30px;}
+.school_syms td{ border-bottom:1px solid #eee; line-height:30px;}
+.school_syms td td{ border:none}
+#course{ background:#fff; margin:0px auto; padding-top:10px;}
+
+.school_photo ul{ margin-left:40px;}
+.school_photo li{ float:left; width:260px; height:220px; text-align:center; margin-left:20px; margin-top:10px;}
+.school_photo li  img{ width:250px; height:220px;}
+#imgBox{ margin-top:10px;}
+
+.school_form{ margin-top:10px;}
+.school_form li{ line-height:30px; line-height:30px; margin-left:10px;}
+.school_form li input{ border:1px solid #ccc; width:160px;}
+.school_form li  b{ color:#f00;}
+.school_form li  #PubTitle{ margin-right:10px; width:115px;}
+.school_form li  #enter,.school_form li #rewrite{ width:50px;}
+#mapsite{float:right; width:218px; height:246px; margin-right:6px;}
+
+/*user*/
+.center{ background:#E7EBEE url(images/school/u_bg.jpg) bottom repeat-x;}
+#u_head_box{ height:116px; background:url(images/school/u_head.jpg) repeat-x;}
+#u_head{width:960px;margin:0px auto; clear:both;}
+.u_copyright{ width:960px; margin:auto; left:25%}
+.u_copyright  p{ margin-right:15px;}
+.u_logo{ float:left; width:200px; padding-top:15px;}
+#u_head span{ float:right; margin-top:50px; line-height:26px;}
+#u_head span a{ width:60px; height:26px; display:block; float:left; margin-left:5px; text-align:center; color:#06C; background:url(images/school/U_button.jpg) no-repeat;}
+
+#u_center{ height:459px; width:1007px; margin:0px auto; background:url(images/school/u_center.jpg) bottom repeat-x;}
+#u_center ul{ margin:0px auto; width:230px; padding-top:165px; color:#666;}
+#u_center li{ height:30px; line-height:30px;}
+#u_center li a{ color:#f90; margin-left:5px; text-decoration:underline;	}
+#btnLogin{ border:none; width:79px; height:28px; background:url(images/school/login.jpg) no-repeat;}
+#reset{ border:none; width:79px; height:28px; background:url(images/school/reset.jpg) no-repeat; margin-left:30px;}
+.u_copyright{ position:fixed; bottom:30px; height:37px; line-height:37px; background:url(images/school/U_copyright.jpg) repeat-x;}
+.u_copyright p{ color:#fff; text-align:right;}
+.u_body{ background:#cecfd1}
+
+#Page{ font-weight:bold;}
+#paBo #bottom{ border-top:#f00 2px solid;}
+#scolist{}
+#scolist p.stitle{ font-size:14px; line-height:30px; font-weight:bold; color:#f60;}
+#scolist ul{ border-top:#F66 2px solid;}
+#scolist li{ line-height:30px; color:#333; border-bottom:#dedede 1px dotted; padding-left:10px; position:relative; }
+#scolist li:hover{ background:#f1f6fc;}
+#scolist li img{ position:absolute; width:50px; height:50px; left:5px; top:5px;}
+#scolist li p{ padding-left:60px;}
+.schansw{ line-height:24px; color:#666; padding-left:10px; border-bottom:#F96 1px dashed;}
+.schansw:hover{ background:#FCC; color:#f00;}
+.submit{ width:95px; height:31px; text-align:center; line-height:31px; font-weight:bold; color:#fff; font-size:14px; background:url(images/school/submit.gif) no-repeat; border:none; margin-top:10px;}
+
+
+
+
+
+
+
+
+ssss

@@ -1,0 +1,26 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>749</LabelID>
+    <LabelName>根据黄页ID输出VIP值</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>黄页</LabelCate>
+    <LabelDesc />
+    <LabelParam>pid,1,1,黄页ID</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_Page left join {table1}.dbo.ZL_User on {table1}.dbo.ZL_Page.UserID={table1}.dbo.ZL_User.UserID</LabelTable>
+    <LabelField>{table1}.dbo.ZL_User.VIP</LabelField>
+    <LabelWhere>ZL_Page.ID=@pid</LabelWhere>
+    <LabelOrder />
+    <LabelContent>{Field="VIP"/}</LabelContent>
+    <LabelCount>1</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</NewDataSet>

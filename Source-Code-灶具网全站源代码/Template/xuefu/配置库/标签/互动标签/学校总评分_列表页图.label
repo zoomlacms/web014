@@ -1,0 +1,36 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>612</LabelID>
+    <LabelName>学校总评分_列表页图</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>互动标签</LabelCate>
+    <LabelDesc />
+    <LabelParam>GeneralID,1,1,内容ID</LabelParam>
+    <LabelTable>ZL_Pub_WZTP left join ZL_CommonModel on ZL_Pub_WZTP.PubContentid=ZL_CommonModel.GeneralID</LabelTable>
+    <LabelField>sum ( secore ) as num</LabelField>
+    <LabelWhere>ZL_Pub_WZTP.Pubupid=2 And ZL_Pub_WZTP.PubContentid=@GeneralID And ZL_Pub_WZTP.Pubstart=1</LabelWhere>
+    <LabelOrder />
+    <LabelContent>&lt;script&gt;
+var num='{ZL.Label id="学校总评论条数_列表页" GeneralID="@GeneralID" /}';
+var b='{Field="num"/}';
+var a=Math.round(b/num);
+if(num==0)
+ {
+document.write('&lt;img src="{$CssDir/}images/scor0.gif" alt="好评"/&gt;');
+ 	}
+else {document.write('&lt;img src="{$CssDir/}images/scor'+a+'.gif" alt="好评"/&gt;');
+}
+&lt;/script&gt;</LabelContent>
+    <LabelCount>0</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</NewDataSet>

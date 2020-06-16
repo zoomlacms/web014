@@ -1,0 +1,1 @@
+﻿<%@ page language="C#" autoeventwireup="true" inherits="User_mess, App_Web_d1ldudxt" enableEventValidation="false" viewStateEncryptionMode="Never" %>

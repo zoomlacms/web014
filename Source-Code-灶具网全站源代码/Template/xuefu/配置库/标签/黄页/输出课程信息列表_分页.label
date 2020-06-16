@@ -1,0 +1,29 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>621</LabelID>
+    <LabelName>输出课程信息列表_分页</LabelName>
+    <LabelType>4</LabelType>
+    <LabelCate>黄页</LabelCate>
+    <LabelDesc />
+    <LabelParam>NodeID,1,1,节点ID|ShowNum,1,1,显示数|UserName,2,1,用户名</LabelParam>
+    <LabelTable>ZL_CommonModel left join ZL_Page_kcsz on ZL_CommonModel.ItemID=ZL_Page_kcsz.ID</LabelTable>
+    <LabelField>ZL_CommonModel.GeneralID,ZL_CommonModel.Hits,ZL_CommonModel.Title,ZL_Page_kcsz.kksj,ZL_Page_kcsz.xf</LabelField>
+    <LabelWhere>ZL_CommonModel.NodeID=@NodeID And  ZL_CommonModel.Status=99 And ZL_CommonModel.TableName='ZL_Page_kcsz' And ZL_CommonModel.Inputer='@UserName'</LabelWhere>
+    <LabelOrder>ZL_CommonModel.CreateTime DESC</LabelOrder>
+    <LabelContent>{Repeate}   
+&lt;tr&gt;&lt;td&gt;&lt;a href="/page/PageContent.aspx?ItemID={Field="GeneralID"/}&amp;pageid={$GetRequest(pageid)$}"&gt; {Field="Title"/}&lt;/a&gt;&lt;/td&gt;&lt;td&gt; {Field="kksj"/}&lt;/td&gt;&lt;td&gt;￥ {Field="xf"/}元&lt;/td&gt;&lt;td&gt; {Field="Hits"/}&lt;/td&gt;&lt;td&gt;&lt;a href="/page/PageContent.aspx?ItemID={Field="GeneralID"/}&amp;pageid={$GetRequest(pageid)$}"&gt;在线报名&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+{/Repeate}
+&lt;tr&gt;&lt;td  colspan="5"&gt;{ZL.Page/}&lt;/td&gt;&lt;/tr&gt;</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</NewDataSet>

@@ -1,0 +1,26 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>599</LabelID>
+    <LabelName>首页热门关键词</LabelName>
+    <LabelType>1</LabelType>
+    <LabelCate>静态标签</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable />
+    <LabelField />
+    <LabelWhere />
+    <LabelOrder />
+    <LabelContent>&lt;a href="/Search/SearchList.aspx?node=0&amp;keyword=%e5%85%ac%e5%8a%a1%e5%91%98"&gt;公务员&lt;/a&gt;&lt;a href="/Search/SearchList.aspx?node=0&amp;keyword=%e6%b1%bd%e4%bf%ae"&gt;汽修&lt;/a&gt;&lt;a href="/Search/SearchList.aspx?node=0&amp;keyword=%e7%95%99%e5%ad%a6"&gt;留学&lt;/a&gt;&lt;a href="/Search/SearchList.aspx?node=0&amp;keyword=%e8%8b%b1%e8%af%ad"&gt;英语&lt;/a&gt;&lt;a href="/Search/SearchList.aspx?node=0&amp;keyword=%e7%ae%a1%e7%90%86"&gt;管理&lt;/a&gt;&lt;a href="/Search/SearchList.aspx?node=0&amp;keyword=MBA"&gt;MBA&lt;/a&gt;&lt;a href="/Search/SearchList.aspx?node=0&amp;keyword=EMBA"&gt;EMBA&lt;/a&gt;</LabelContent>
+    <LabelCount />
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</NewDataSet>

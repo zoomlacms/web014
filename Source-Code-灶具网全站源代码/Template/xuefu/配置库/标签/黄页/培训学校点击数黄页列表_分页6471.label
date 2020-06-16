@@ -1,0 +1,51 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>669</LabelID>
+    <LabelName>培训学校点击数黄页列表_分页6471</LabelName>
+    <LabelType>4</LabelType>
+    <LabelCate>黄页</LabelCate>
+    <LabelDesc />
+    <LabelParam>ShowNum,10,1,显示数</LabelParam>
+    <LabelTable>ZL_Page left join ZL_Reg_Page on ZL_Page.UserID=ZL_Reg_Page.UserID</LabelTable>
+    <LabelField>ZL_Page.ID,ZL_Page.LOGO,ZL_Page.Proname,ZL_Reg_Page.address,ZL_Reg_Page.area,ZL_Reg_Page.course,ZL_Reg_Page.type,renzo</LabelField>
+    <LabelWhere>( area like '%{ZL.Label id="根据Dicid得到单级字典名称" /}%' or '%[err:无记录]%' like '%{ZL.Label id="根据Dicid得到单级字典名称" /}%' )</LabelWhere>
+    <LabelOrder>{table1}.dbo.ZL_Page.Hits DESC</LabelOrder>
+    <LabelContent>{Repeate}
+&lt;div class="list_m1"&gt;
+&lt;div class="lim1_L"&gt;&lt;a href="/Page/Default.aspx?pageid={Field="ID"/}" target="_blank"&gt;&lt;img src="{ZL:GetPicUrl({Field="LOGO"/})/}" alt="{Field="Proname"/}" &gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div class="lim1_M"&gt;
+&lt;a href="/Page/Default.aspx?pageid={Field="ID"/}" target="_blank"&gt;{Field="Proname"/}&lt;/a&gt;
+&lt;script&gt;
+var renzo='{Field="renzo"/}';
+if(renzo==1)
+{
+document.write('&lt;img src="/Template/xuefu/style/images/school/zfb_person_small.gif" alt="实名认证"/&gt;&lt;img src="/Template/xuefu/style/images/school/rezs.jpg" alt="培训认证"/&gt;');}
+&lt;/script&gt;
+&lt;br/&gt;
+&lt;p&gt;地址：{Field="address"/}&lt;br/&gt;主营：{Field="type"/}&lt;br/&gt;&lt;a href="/Page/Pagelist.aspx?NodeID=2&amp;pageid={Field="ID"/}" target="_blank"&gt;课程列表&lt;/a&gt;|
+&lt;a href="/Page/Pagelist.aspx?NodeID=9&amp;pageid={Field="ID"/}" target="_blank"&gt;查看点评&lt;/a&gt;|
+&lt;a href="/Page/Pagelist.aspx?NodeID=1&amp;pageid={Field="ID"/}" target="_blank"&gt;机构介绍&lt;/a&gt;&lt;/p&gt;
+&lt;span&gt;课程：{ZL:CutText({Field="course"/},86,)/}&lt;a href="/Page/Pagelist.aspx?NodeID=2&amp;pageid={Field="ID"/}" target="_blank"&gt;更多&gt;&gt;&lt;/a&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="lim1_R"&gt;
+&lt;div class="lim1RL"&gt;&lt;span id="socre{Field="ID"/}"&gt;{ZL.Label id="学校总评分_列表页数" GeneralID="{Field="ID"/}" /}好评&lt;/span&gt;&lt;br/&gt;&lt;a href="/Page/Pagelist.aspx?NodeID=9&amp;pageid={Field="ID"/}" target="_blank"&gt;{ZL.Label id="学校总评分_列表页图" GeneralID="{Field="ID"/}" /}&lt;/a&gt;&lt;br/&gt;&lt;b&gt;{ZL.Label id="学校总评论条数_列表页" GeneralID="{Field="ID"/}" /}&lt;/b&gt;条网友点评&lt;/div&gt;
+&lt;div class="lim1RR"&gt;信用：100&lt;br/&gt;&lt;a href="/Page/Default.aspx?pageid={Field="ID"/}" target="_blank"&gt;&lt;img src="{$CssDir/}images/bott3.jpg" alt="查看详情"&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="clear"&gt;&lt;/div&gt;
+&lt;/div&gt;
+{/Repeate}
+&lt;div class="clear"&gt;&lt;/div&gt;
+{ZL.Page/}</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</NewDataSet>

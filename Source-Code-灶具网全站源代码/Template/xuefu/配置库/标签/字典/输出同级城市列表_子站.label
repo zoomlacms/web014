@@ -1,0 +1,28 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>820</LabelID>
+    <LabelName>输出同级城市列表_子站</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>字典</LabelCate>
+    <LabelDesc />
+    <LabelParam>cate,1,1,类别|ShowNum,10,1,显示数|NodeID,1,1,节点ID|ParentID,1,1,父ID</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_Grade</LabelTable>
+    <LabelField>Grade,GradeID,GradeName,ParentID</LabelField>
+    <LabelWhere>Cate=@cate And ParentID=@ParentID</LabelWhere>
+    <LabelOrder>GradeID ASC</LabelOrder>
+    <LabelContent>{Repeate}
+&lt;li id="AR{Field="GradeID"/}"&gt;&lt;a href="{ZL:GetNodeLinkUrl(@NodeID)/}?city={$GetUrlencode({Field="GradeName"/})$}&amp;cate2={$GetRequest(cate2)$}&amp;area={Field="GradeID"/}"&gt;{Field="GradeName"/}&lt;/a&gt;&lt;/li&gt;
+{/Repeate}</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</NewDataSet>

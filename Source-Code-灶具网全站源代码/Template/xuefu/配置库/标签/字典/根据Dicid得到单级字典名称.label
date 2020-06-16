@@ -1,0 +1,26 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>511</LabelID>
+    <LabelName>根据Dicid得到单级字典名称</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>字典</LabelCate>
+    <LabelDesc />
+    <LabelParam>Dicid,21,1,字典ID</LabelParam>
+    <LabelTable>ZL_Datadic</LabelTable>
+    <LabelField>Dicname</LabelField>
+    <LabelWhere>Diccate=1 And Dicid='{$GetRequest(area)$}'</LabelWhere>
+    <LabelOrder />
+    <LabelContent>{Field="Dicname"/}</LabelContent>
+    <LabelCount>1</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</NewDataSet>

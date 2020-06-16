@@ -1,0 +1,26 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>765</LabelID>
+    <LabelName>根据城市名称得到城市ID</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>字典</LabelCate>
+    <LabelDesc />
+    <LabelParam>cate,1,1,类别</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_Grade</LabelTable>
+    <LabelField>GradeID</LabelField>
+    <LabelWhere>Cate=@cate And GradeName like '%{$GetUrldecode({$GetRequest(city)$})$}%'</LabelWhere>
+    <LabelOrder />
+    <LabelContent>{Field="GradeID"/}</LabelContent>
+    <LabelCount>1</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</NewDataSet>

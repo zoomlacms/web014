@@ -1,0 +1,31 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>794</LabelID>
+    <LabelName>置顶课程列表_子站</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>子站</LabelCate>
+    <LabelDesc />
+    <LabelParam>NodeID,26,1,节点ID|ShowNum,10,1,显示数|TitleNum,30,1,标题长|AddrNum,30,1,地址长|city,1,1,城市</LabelParam>
+    <LabelTable>ZL_CommonModel left join ZL_Page_kcsz on ZL_CommonModel.ItemID=ZL_Page_kcsz.ID</LabelTable>
+    <LabelField>ZL_CommonModel.CreateTime,ZL_CommonModel.GeneralID,ZL_CommonModel.Hits,ZL_CommonModel.Inputer,ZL_CommonModel.NodeID,ZL_CommonModel.Title,ZL_Page_kcsz.kksj,ZL_Page_kcsz.skdd,ZL_Page_kcsz.xf,ZL_Page_kcsz.yhjg,pic</LabelField>
+    <LabelWhere>status=99 and TableName='ZL_Page_kcsz' and zd=1 and inputer&lt;&gt;'admin'  And ZL_Page_kcsz.city like '%@city%'</LabelWhere>
+    <LabelOrder>ZL_CommonModel.CreateTime DESC</LabelOrder>
+    <LabelContent>{Repeate}&lt;li class="zdlist"&gt;&lt;span class="lh" style="width:55px;"&gt;{ZL.Label id="报名人数统计" PubContentID="{Field="GeneralID"/}" /}&lt;/span&gt;&lt;span&gt;&lt;em&gt;￥{ZL:GetMoney({Field="yhjg"/},2,1)/}&lt;/em&gt;&lt;br/&gt;&lt;del&gt;{ZL:GetMoney({Field="xf"/},2,1)/}&lt;/del&gt;&lt;/span&gt;&lt;span class="lh"&gt;{Field="hits"/}&lt;/span&gt;&lt;span class="lh"&gt;{ZL:FormatDate({Field="CreateTime"/},MM-dd)/}&lt;/span&gt;
+&lt;p class="kcpic"&gt;&lt;img src="{ZL:GetPicUrl({Field="pic"/})/}"&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;&lt;a href="/page/PageContent.aspx?ItemID={Field="GeneralID"/}&amp;pageid={ZL.Label id="根据用户名得到黄页ID" UserName="{Field="Inputer"/}" /}" target="_blank"&gt;{ZL:CutText({Field="Title"/},@TitleNum,)/}&lt;/a&gt; 置顶&lt;/b&gt;&lt;br/&gt;
+开课日期：{Field="kksj"/}&lt;br/&gt;
+{ZL:CutText({Field="skdd"/},@AddrNum,)/}&lt;br/&gt;
+{ZL.Label id="根据用户名得到黄页ID与名称" UserName="{Field="Inputer"/}" /}{ZL.Label id="根据会员名输出认证与付费" UserName="{Field="Inputer"/}" /}&lt;/p&gt;
+{/Repeate}</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</NewDataSet>

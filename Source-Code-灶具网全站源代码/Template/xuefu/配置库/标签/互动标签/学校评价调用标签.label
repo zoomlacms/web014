@@ -1,0 +1,27 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>768</LabelID>
+    <LabelName>学校评价调用标签</LabelName>
+    <LabelType>4</LabelType>
+    <LabelCate>互动标签</LabelCate>
+    <LabelDesc>ZL_Pub_WZTP分页标签</LabelDesc>
+    <LabelParam />
+    <LabelTable>{table1}.dbo.ZL_Pub_WZTP</LabelTable>
+    <LabelField>PubAddTime,PubContent,secore,PubUserID,PubUserName</LabelField>
+    <LabelWhere>Pubupid=2 And PubContentid={$GetRequest(pageid)$} And Pubstart=1 and  Parentid=0</LabelWhere>
+    <LabelOrder>PubAddTime DESC</LabelOrder>
+    <LabelContent>&lt;ul&gt;{Repeate}&lt;li&gt;{ZL.Label id="根据会员ID输出会员名" UserID="{Field="PubUserID"/}" /}&lt;p&gt;总评分：{Field="secore"/}  点评时间：{Field="PubAddTime"/}&lt;br&gt;评价内容：{Field="PubContent"/}&lt;/p&gt;&lt;/li&gt;{/Repeate}&lt;/ul&gt;
+{ZL.Page/}</LabelContent>
+    <LabelCount>10</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</NewDataSet>

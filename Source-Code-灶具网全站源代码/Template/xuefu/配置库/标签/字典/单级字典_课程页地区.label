@@ -1,0 +1,28 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>519</LabelID>
+    <LabelName>单级字典_课程页地区</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>字典</LabelCate>
+    <LabelDesc />
+    <LabelParam>cate,1,1,类|ShowNum,10,1,显示数|NodeID,1,1,节点ID|pid,1,1,大类|lei,2,1,小类</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_Datadic</LabelTable>
+    <LabelField>Dicid,Dicname</LabelField>
+    <LabelWhere>Diccate=@cate</LabelWhere>
+    <LabelOrder>Dicid ASC</LabelOrder>
+    <LabelContent>{Repeate}
+&lt;li id="AR{Field="Dicid"/}"&gt;&lt;a href="/Class_@NodeID/NodePage.aspx?cate2=@pid&amp;majoy=@lei&amp;area={Field="Dicid"/}"&gt;{Field="Dicname"/}&lt;/a&gt;&lt;/li&gt;{/Repeate}
+{/Repeate}</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</NewDataSet>

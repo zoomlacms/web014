@@ -1,0 +1,46 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>747</LabelID>
+    <LabelName>Google地图搜索结果</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>全站通用</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable>ZL_PageReg left join ZL_Reg_Page on ZL_PageReg.UserID=ZL_Reg_Page.UserID</LabelTable>
+    <LabelField>ZL_PageReg.CompanyName,ZL_PageReg.ID,ZL_PageReg.LOGO,ZL_Reg_Page.address,ZL_Reg_Page.map,ZL_Reg_Page.road,ZL_Reg_Page.tel</LabelField>
+    <LabelWhere>CompanyName like '%{$GetUrldecode({$GetRequest(keyword)$})$}%' And  ZL_Reg_Page.map&lt;&gt;'' And area like '%{$GetUrldecode({$GetRequest(city)$})$}%'  And ( type like '%{ZL.Label id="根据字典ID得到字典名" cate="3" gid="{$GetRequest(lei)$}" /}%' or '%[err:无记录]%' like '%{ZL.Label id="根据字典ID得到字典名" cate="3" gid="{$GetRequest(lei)$}" /}%')  </LabelWhere>
+    <LabelOrder>ZL_PageReg.CreationTime DESC</LabelOrder>
+    <LabelContent>{Repeate}
+  //machao 添加标记
+ 		     var myLatLng{ZL:jsq}= new google.maps.LatLng{Field="map"/};    
+        var marker = new google.maps.Marker({
+            position:myLatLng{ZL:jsq},map:map,title:"{Field="CompanyName"/}"
+        });
+        
+        var zoomLevel;
+		
+        //显示图片
+ var showImg{ZL:jsq} = "&lt;span&gt;&lt;img src='/Uploadfiles/{Field="LOGO"/}' alt='{Field="CompanyName"/}'/&gt;学校名称：&lt;a href='/Page/Default.aspx?pageid={Field="ID"/}' target='_blank'&gt;{Field="CompanyName"/}&lt;/a&gt;&lt;br/&gt;电话：{Field="tel"/}&lt;br/&gt;地址：{Field="address"/}&lt;br/&gt;路线：{Field="road"/}&lt;/span&gt;";
+        var infowindow{ZL:jsq}= new google.maps.InfoWindow({
+            content:showImg{ZL:jsq},
+            size:new google.maps.Size(50,50),
+            position:myLatLng{ZL:jsq}
+        });
+		     infowindow{ZL:jsq}.open(map);
+    google.maps.event.addListener(marker,'click',function(){
+            infowindow{ZL:jsq}.open(map);
+        });  
+{/Repeate}</LabelContent>
+    <LabelCount>100</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</NewDataSet>

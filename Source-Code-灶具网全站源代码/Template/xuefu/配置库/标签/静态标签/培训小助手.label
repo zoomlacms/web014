@@ -1,0 +1,27 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>611</LabelID>
+    <LabelName>培训小助手</LabelName>
+    <LabelType>1</LabelType>
+    <LabelCate>静态标签</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable />
+    <LabelField />
+    <LabelWhere />
+    <LabelOrder />
+    <LabelContent>&lt;span class="askph"&gt;咨询电话：400-0088-112&lt;/span&gt;
+&lt;a href="/Class_6/Default.aspx" class="online"&gt;求学登记&lt;/a&gt;&lt;a href=http://wpa.qq.com/msgrd?V=1&amp;Uin=你的QQ号码&amp;Site={$SiteURL/}&amp;Menu=yes class="onlineask" target="blank"&gt;&lt;img border="0" SRC=http://wpa.qq.com/pa?p=3:你的QQ号码:3 alt="QQ咨询"&gt;&lt;/a&gt;</LabelContent>
+    <LabelCount />
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</NewDataSet>

@@ -1,0 +1,29 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>678</LabelID>
+    <LabelName>输出全景图片列表_分页</LabelName>
+    <LabelType>4</LabelType>
+    <LabelCate>黄页</LabelCate>
+    <LabelDesc />
+    <LabelParam>ShowNum,1,1,显示数|UserName,2,1,用户名</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_CommonModel left join {table1}.dbo.ZL_C_qjtp on {table1}.dbo.ZL_CommonModel.ItemID={table1}.dbo.ZL_C_qjtp.ID</LabelTable>
+    <LabelField>ZL_CommonModel.GeneralID,ZL_CommonModel.Title,ZL_C_qjtp.pic</LabelField>
+    <LabelWhere>ZL_CommonModel.Status=99 And ZL_CommonModel.TableName='ZL_C_qjtp'  And {table1}.dbo.ZL_C_qjtp.szxx={$GetRequest(Pageid)$}</LabelWhere>
+    <LabelOrder>ZL_CommonModel.CreateTime DESC</LabelOrder>
+    <LabelContent>&lt;ul&gt;{Repeate}&lt;li&gt;&lt;a href="/page/PageContent.aspx?ItemID={Field="GeneralID"/}&amp;pageid={$GetRequest(pageid)$}" title="{Field="Title"/}"&gt;&lt;img src="{ZL:GetPicUrl({Field="pic"/})/}" alt="{Field="Title"/}"&gt;&lt;/a&gt;&lt;/li&gt;{/Repeate}&lt;/ul&gt;
+&lt;div class="clear"&gt;&lt;/div&gt;{ZL.Page/} 
+  
+     </LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</NewDataSet>

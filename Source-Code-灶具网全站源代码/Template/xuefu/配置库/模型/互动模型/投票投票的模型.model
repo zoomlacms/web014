@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <ModelID>32</ModelID>
+    <ModelName>投票投票的模型</ModelName>
+    <Description />
+    <TableName>ZL_Pub_TP</TableName>
+    <ItemName>投票</ItemName>
+    <ItemUnit>条</ItemUnit>
+    <ItemIcon>Article.gif</ItemIcon>
+    <ModelType>7</ModelType>
+    <ContentModule>/互动模板/默认投票投票模板.html</ContentModule>
+    <MultiFlag>false</MultiFlag>
+    <IsNull>false</IsNull>
+    <NodeID>0</NodeID>
+    <SysModel>0</SysModel>
+    <FromModel>0</FromModel>
+    <Thumbnail />
+    <Islotsize>false</Islotsize>
+  </Table>
+</NewDataSet>

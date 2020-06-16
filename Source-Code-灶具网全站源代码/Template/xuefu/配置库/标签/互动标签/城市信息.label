@@ -1,0 +1,26 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>767</LabelID>
+    <LabelName>城市信息</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>互动标签</LabelCate>
+    <LabelDesc>ZL_Pub_city分页标签</LabelDesc>
+    <LabelParam />
+    <LabelTable>ZL_Pub_city left join ZL_Pub on ZL_Pub_city.Pubupid=ZL_Pub.Pubid</LabelTable>
+    <LabelField>ZL_Pub_city.PubTitle</LabelField>
+    <LabelWhere>ZL_Pub_city.Pubupid=9 And ZL_Pub_city.Pubstart=1 And ZL_Pub_city.PubIP='{ZL:IPAdd()/}'</LabelWhere>
+    <LabelOrder>ZL_Pub_city.ID DESC</LabelOrder>
+    <LabelContent>{Field="PubTitle"/}</LabelContent>
+    <LabelCount>0</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</NewDataSet>

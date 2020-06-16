@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <ModelID>18</ModelID>
+    <ModelName>培训学校</ModelName>
+    <Description />
+    <TableName>ZL_C_school</TableName>
+    <ItemName>学校</ItemName>
+    <ItemUnit>家</ItemUnit>
+    <ItemIcon>Edit.gif</ItemIcon>
+    <ModelType>1</ModelType>
+    <ContentModule>/内容页/默认培训学校内容页.html</ContentModule>
+    <MultiFlag>true</MultiFlag>
+    <IsNull>false</IsNull>
+    <NodeID>0</NodeID>
+    <SysModel>1</SysModel>
+    <FromModel>0</FromModel>
+    <Thumbnail />
+    <Islotsize>false</Islotsize>
+  </Table>
+</NewDataSet>

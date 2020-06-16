@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SuppliersList>
+  <Baidu Key="REutk7GzCAHD4yiTzMfuBiyB" Secret="aFFXFinbcbwqIGPcwozDeTUs26TrSanG" bool="1" />
+  <Netease Key="0Tj5FdHOuy5ldgNF" Secret="zpg53aZRQtfqtLwqKTatIcHajoRQIdSF" bool="1" />
+  <Renren Key="df5a5510cc6348d7a9e9a9646ef6fc4c" Secret="234d0ea5ee6b4861b5635e599327c19c" bool="1" />
+  <Kaixin Key="821046270485f4a677155d8a8fc2488" Secret="4235db7bc7762ca5891103f87ebb3e9b" bool="1" />
+  <QQ Key="204134" Secret="4c46ac3122a0ccb5ebf14b2a77de3516" bool="1" />
+  <Sina Key="234217663" Secret="54c0786e94ba514303a4d75352b07557" bool="1" />
+</SuppliersList>

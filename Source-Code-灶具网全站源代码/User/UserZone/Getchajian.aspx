@@ -1,0 +1,1 @@
+﻿<%@ page language="C#" autoeventwireup="true" inherits="User_UserZone_Getchajian, App_Web_hvhfp4dy" enableEventValidation="false" viewStateEncryptionMode="Never" %>

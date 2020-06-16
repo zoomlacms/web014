@@ -1,0 +1,26 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>655</LabelID>
+    <LabelName>首页学习分类小类数据字典</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>字典</LabelCate>
+    <LabelDesc />
+    <LabelParam>pid,默认值,1,父id|cate,2,1,类|ShowNum,10,1,显示数|NodeID,26,1,节点ID</LabelParam>
+    <LabelTable>ZL_Grade left join ZL_Node on ZL_Grade.GradeName=ZL_Node.NodeName</LabelTable>
+    <LabelField>GradeID,GradeName</LabelField>
+    <LabelWhere>Cate=@cate And ZL_Grade.ParentID=@pid</LabelWhere>
+    <LabelOrder>ZL_Grade.GradeID ASC</LabelOrder>
+    <LabelContent>{Repeate}&lt;a href="/Class_@NodeID/NodePage.aspx?cate2=@pid&amp;majoy={$GetUrlencode({Field="GradeID"/})$}"&gt;{Field="GradeName"/}&lt;/a&gt;{/Repeate}</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</NewDataSet>

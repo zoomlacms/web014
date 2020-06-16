@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <ModelID>39</ModelID>
+    <ModelName>学校认证</ModelName>
+    <Description />
+    <TableName>ZL_C_renzo</TableName>
+    <ItemName>执照</ItemName>
+    <ItemUnit>张</ItemUnit>
+    <ItemIcon>Default.gif</ItemIcon>
+    <ModelType>1</ModelType>
+    <ContentModule>/内容页/默认学校认证内容页.html</ContentModule>
+    <MultiFlag>true</MultiFlag>
+    <IsNull>false</IsNull>
+    <NodeID>0</NodeID>
+    <SysModel>1</SysModel>
+    <FromModel>0</FromModel>
+    <Thumbnail />
+    <Islotsize>false</Islotsize>
+  </Table>
+</NewDataSet>

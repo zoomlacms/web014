@@ -1,0 +1,144 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>505</LabelID>
+    <LabelName>全站头部</LabelName>
+    <LabelType>1</LabelType>
+    <LabelCate>静态标签</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable />
+    <LabelField />
+    <LabelWhere />
+    <LabelOrder />
+    <LabelContent>&lt;script&gt;
+    function setEmpty(obj) {
+        if (obj.value == "请输入关键字") {
+            obj.value = "";
+        }
+    }
+    function settxt(obj) {
+        if (obj.value == "") {
+            obj.value = "请输入关键字";
+        }
+    }
+&lt;/script&gt;
+&lt;div id="head"&gt;
+&lt;div id="logo"&gt;&lt;a href="/"&gt;&lt;img src="{$LogoUrl/}" alt="{$SiteName/}" /&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div id="head_c"&gt;
+ 主站&lt;a href="/"&gt;切换城市&lt;/a&gt;
+&lt;/div&gt;
+&lt;div id="head_r"&gt;
+&lt;a href="/user/" style="background:url({$CssDir/}images/user.gif) left no-repeat;"&gt;会员登录&lt;/a&gt;
+&lt;a onclick="this.style.behavior='url(#default#homepage)'; this.setHomePage('{$SiteURL/}');" style="background:url({$CssDir/}images/home.gif) left no-repeat; cursor:pointer;"&gt;设为首页&lt;/a&gt;
+&lt;a onclick="javascript:window.external.AddFavorite('{$SiteURL/}','{$SiteTitle/}')" title="收藏本站到你的收藏夹" style="background:url({$CssDir/}images/love.gif) left no-repeat; cursor:pointer;"&gt;加入收藏&lt;/a&gt;&lt;br/&gt;
+&lt;span&gt;
+&lt;form action="/Class_4/NodeElite.aspx" method="get"&gt;
+&lt;input type="text" onclick="setEmpty(this)" onblur="settxt(this)" name="Keyword" id="Keyword" value="请输入关键字"&gt;
+&lt;input type="submit" id="btnSearch" name="Search" name="button" value="搜索"&gt;
+&lt;/form&gt;
+&lt;/span&gt;&lt;/div&gt;
+&lt;div class="clear"&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;!-- head end --&gt;
+&lt;div id="nav"&gt;
+&lt;ul&gt;
+&lt;li style="cursor:pointer; font-weight:normal;"&gt;所有分类
+&lt;!--[if lte IE 6]&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;![endif]--&gt;   
+&lt;ul&gt;   
+&lt;li&gt;
+&lt;dl&gt;
+&lt;dt&gt;&lt;a href="/Class_2/default.aspx?cate2=673" class="ssl"&gt;外语培训&lt;/a&gt;&lt;/dt&gt;
+{ZL.Label id="学校小类" Cate="3" ParentID="673" ShowNum="10" NodeID="8" /}
+&lt;/dl&gt;
+&lt;/li&gt;  
+
+&lt;li&gt;
+&lt;dl&gt;
+&lt;dt&gt;&lt;a href="/Class_2/default.aspx?cate2=674" class="ssl"&gt;电脑/IT&lt;/a&gt;&lt;/dt&gt;
+{ZL.Label id="学校小类" Cate="3" ParentID="674" ShowNum="10" NodeID="8" /}
+&lt;/dl&gt;
+&lt;/li&gt;   
+
+&lt;li&gt;
+&lt;dl&gt;
+&lt;dt&gt;&lt;a href="/Class_2/default.aspx?cate2=675" class="ssl"&gt;职业技能&lt;/a&gt;&lt;/dt&gt;
+{ZL.Label id="学校小类" Cate="3" ParentID="675" ShowNum="10" NodeID="8" /}
+&lt;/dl&gt;
+&lt;/li&gt;  
+
+&lt;li&gt;
+&lt;dl&gt;
+&lt;dt&gt;&lt;a href="/Class_2/default.aspx?cate2=676" class="ssl"&gt;资格认证&lt;/a&gt;&lt;/dt&gt;
+{ZL.Label id="学校小类" Cate="3" ParentID="676" ShowNum="10" NodeID="8" /}
+&lt;/dl&gt;
+&lt;/li&gt;  
+
+&lt;li&gt;
+&lt;dl&gt;
+&lt;dt&gt;&lt;a href="/Class_2/default.aspx?cate2=677" class="ssl"&gt;文体艺术&lt;/a&gt;&lt;/dt&gt;
+{ZL.Label id="学校小类" Cate="3" ParentID="677" ShowNum="10" NodeID="8" /}
+&lt;/dl&gt;
+&lt;/li&gt;  
+
+&lt;li&gt;
+&lt;dl&gt;
+&lt;dt&gt;&lt;a href="/Class_2/default.aspx?cate2=678" class="ssl"&gt;学历教育&lt;/a&gt;&lt;/dt&gt;
+{ZL.Label id="学校小类" Cate="3" ParentID="678" ShowNum="10" NodeID="8" /}
+&lt;/dl&gt;
+&lt;/li&gt;  
+
+&lt;li&gt;
+&lt;dl&gt;
+&lt;dt&gt;&lt;a href="/Class_2/default.aspx?cate2=679" class="ssl"&gt;研修管理&lt;/a&gt;&lt;/dt&gt;
+{ZL.Label id="学校小类" Cate="3" ParentID="679" ShowNum="10" NodeID="8" /}
+&lt;/dl&gt;
+&lt;/li&gt;  
+
+&lt;li&gt;
+&lt;dl&gt;
+&lt;dt&gt;&lt;a href="/Class_2/default.aspx?cate2=680" class="ssl"&gt;出国留学&lt;/a&gt;&lt;/dt&gt;
+{ZL.Label id="学校小类" Cate="3" ParentID="680" ShowNum="10" NodeID="8" /}
+&lt;/dl&gt;
+&lt;/li&gt;  
+
+&lt;li&gt;
+&lt;dl&gt;
+&lt;dt&gt;&lt;a href="/Class_2/default.aspx?cate2=681" class="ssl"&gt;补习辅导&lt;/a&gt;&lt;/dt&gt;
+{ZL.Label id="学校小类" Cate="3" ParentID="681" ShowNum="10" NodeID="8" /}
+&lt;/dl&gt;
+&lt;/li&gt;  
+
+&lt;li&gt;
+&lt;dl&gt;
+&lt;dt&gt;&lt;a href="/Class_2/default.aspx?cate2=682" class="ssl"&gt;公务员&lt;/a&gt;&lt;/dt&gt;
+{ZL.Label id="学校小类" Cate="3" ParentID="682" ShowNum="10" NodeID="8" /}
+&lt;/dl&gt;
+&lt;/li&gt; 
+
+&lt;/ul&gt;   
+&lt;!--[if lte IE 6]&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/a&gt;&lt;![endif]--&gt;   
+&lt;/li&gt;
+&lt;li id="Menu0"&gt;&lt;a href="/"&gt;网站首页&lt;/a&gt;&lt;/li&gt;
+&lt;li id="Menu1"&gt;&lt;a href="{ZL:GetNodeLinkUrl(1)/}"&gt;培训课程&lt;/a&gt;&lt;/li&gt;
+&lt;li id="Menu2"&gt;&lt;a href="{ZL:GetNodeLinkUrl(2)/}"&gt;培训学校&lt;/a&gt;&lt;/li&gt;
+&lt;li id="Menu3"&gt;&lt;a href="{ZL:GetNodeLinkUrl(3)/}"&gt;团购课程&lt;/a&gt;&lt;/li&gt;
+&lt;li id="Menu4"&gt;&lt;a href="{ZL:GetNodeLinkUrl(4)/}"&gt;新闻资讯&lt;/a&gt;&lt;/li&gt;
+&lt;li id="Menu5"&gt;&lt;a href="http://ask.xuefu.cc"&gt;问答中心&lt;/a&gt;&lt;/li&gt;
+&lt;li id="Menu6"&gt;&lt;a href="http://qiu.xuefu.cc"&gt;求学登记&lt;/a&gt;&lt;/li&gt;
+&lt;li id="Menu7"&gt;&lt;a href="http://Learn.xuefu.cc"&gt;学习资料&lt;/a&gt;&lt;/li&gt;
+&lt;li id="Menu61"&gt;&lt;a href="http://123.xuefu.cc/" target="_blank"&gt;网址导航&lt;/a&gt;&lt;/li&gt;
+&lt;li style=" font-weight:normal;"&gt;&lt;a href="/user/"&gt;学校入住&lt;/a&gt;&lt;/li&gt;
+&lt;div class="clear"&gt;&lt;/div&gt;&lt;/ul&gt;
+&lt;/div&gt;&lt;!-- nav end --&gt;</LabelContent>
+    <LabelCount />
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</NewDataSet>

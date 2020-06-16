@@ -1,0 +1,26 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>593</LabelID>
+    <LabelName>课程页学校链接</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>全站通用</LabelCate>
+    <LabelDesc />
+    <LabelParam>inputer,qqq,1,录入者</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_CommonModel left join {table1}.dbo.ZL_C_school on {table1}.dbo.ZL_CommonModel.because_back={table1}.dbo.ZL_C_school.address</LabelTable>
+    <LabelField>{table1}.dbo.ZL_CommonModel.GeneralID</LabelField>
+    <LabelWhere>(NodeID=2 or FirstNodeID=2) and status=99 and inputer like '@inputer'</LabelWhere>
+    <LabelOrder>ZL_CommonModel.CreateTime DESC</LabelOrder>
+    <LabelContent>{ZL:GetInfoUrl({Field="GeneralID"/})/}</LabelContent>
+    <LabelCount>1</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</NewDataSet>

@@ -1,0 +1,37 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>589</LabelID>
+    <LabelName>中心待解决问题列表</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>问答</LabelCate>
+    <LabelDesc />
+    <LabelParam>num,默认值,1,数量</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_Pub_ask</LabelTable>
+    <LabelField>ClassLevel1,ID,PubAddTime,PubContent,PubTitle,j</LabelField>
+    <LabelWhere>classlevel1 in (389,390,391,392,393,394,395,396,397,398,0) and id not in ( select getid from ZL_Pub_zjda )</LabelWhere>
+    <LabelOrder>id desc</LabelOrder>
+    <LabelContent>{Repeate}
+&lt;dl&gt;
+&lt;dt&gt;&lt;span class="j"&gt;{Field="j"/}&lt;/span&gt;&lt;a href="/Class_59/default.aspx?bigclass={Field="ClassLevel1"/}"&gt;[{ZL.Label id="获取问题分类名" parentid="{Field="ClassLevel1"/}" /}]&lt;/a&gt;
+&lt;span&gt;&lt;a href="{ZL:GetNodeListUrl(60)/}?getid={Field="ID"/}" title="{Field="PubTitle"/}" target="_blank"&gt;{ZL:CutText({Field="PubTitle"/},30,..)/}&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;dd&gt;
+&lt;p&gt;{ZL:FormatDate({Field="PubAddTime"/},yyyy-MM-dd)/}&lt;/p&gt;
+&lt;span&gt;{ZL.Label id="问题回答数" getid="{Field="ID"/}" /}&lt;/span&gt;
+&lt;span&gt;&lt;img src="{$CssDir/}images/ico_q.gif" width="16" height="16" /&gt;&lt;/span&gt;
+&lt;/dd&gt;
+&lt;div style="clear:both"&gt;&lt;/div&gt;
+&lt;/dl&gt;
+{/Repeate}</LabelContent>
+    <LabelCount>@num</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</NewDataSet>

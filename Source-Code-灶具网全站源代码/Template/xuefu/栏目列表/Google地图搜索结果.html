@@ -1,0 +1,113 @@
+{ZL.Source id="节点栏目信息数据源"/}
+<!DOCTYPE HTML>
+<html>
+<head>
+ <title>{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}_{$SiteName/}</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta charset="UTF-8" />
+    <link href="http://code.google.com/intl/zh-CN/apis/maps/documentation/javascript/examples/default.css"
+        rel="stylesheet" type="text/css" />
+        
+    <script type="text/javascript"
+        src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+        <link href="{$CssDir/}global.css" rel="stylesheet" type="text/css" /> 
+  </head>
+  <body>{ZL.Label id="全站头部"/}
+<div style="width:280px; height:870px; float:left; margin-top:20px;">
+<div class="search">
+<form action="/Class_219/NodePage.aspx" method="get">
+<input name="keyword" id="keyw">
+<input type="submit" class="search_bg" value="搜地图">
+</form>
+</div>
+<p class="sM"><a id="stateBut" class="mo" onClick="$use('class1ss','class1content','stateBut')" style="cursor:pointer"> - </a>按区域选择：安徽省 > <a href="{ZL:GetNodeLinkUrl(219)/}?area=">合肥市</a></p>
+<ul id="class1content" >
+{ZL.Label id="单级字典_地区" cate="1" ShowNum="10" NodeID="{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/}" /}
+</ul>
+<ul id="class1ss"></ul>
+<div class="clear"></div>
+<p class="sM"><a id="stateBut1" class="mo" onClick="$use('class2ss','class2content','stateBut1')" style="cursor:pointer"> - </a>按分类选择：所有分类</p>
+</ul>
+<ul id="class2ss"></ul>
+<div class="clear"></div>
+
+<div id="school_map">
+{ZL.Label id="输出学校黄页搜索结果_地图分页" ShowNum="6" TitleNum="30" /}
+</div>
+
+</div>
+  <div id="map_canvas" style="width:85%; position:absolute; top:130px; height:900px; left:15%"></div> 
+  <div class="clear"></div>
+     {ZL.Label id="全站底部"/}
+
+  </body>
+
+    <script type="text/javascript">
+      //定位
+      function initialize() {
+        var myOptions = {
+          zoom: 12,
+          center: new google.maps.LatLng(31.831482,117.226868),
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };        
+        var map = new google.maps.Map(document.getElementById('map_canvas'),
+            myOptions);
+			
+{ZL.Label id="Google地图搜索结果"/}
+  }
+      google.maps.event.addDomListener(window, 'load', initialize);
+
+
+  //更多分类显示
+function $(element){
+return element = document.getElementById(element);
+}
+function $D(element){
+var d=$(element);
+var h=d.offsetHeight;
+var maxh=30;
+function dmove(){
+h+=10; //设置层展开的速度
+if(h>=maxh){
+d.style.height='30px';
+clearInterval(iIntervalId);
+}else{
+d.style.display='block';
+d.style.height=h+'px';
+}
+}
+iIntervalId=setInterval(dmove,2);
+}
+function $D2(element){
+var d=$(element);
+var h=d.offsetHeight;
+var maxh=30;
+function dmove(){
+h-=10;//设置层收缩的速度
+if(h<=0){
+d.style.display='none';
+clearInterval(iIntervalId);
+}else{
+d.style.height=h+'px';
+}
+}
+iIntervalId=setInterval(dmove,2);
+}
+function $use(targetid,hid,objN){
+var d=$(targetid);
+var h=$(hid);
+var sb=$(objN);
+ if (d.style.display=="block"){
+    $D2(targetid);
+	 h.style.display="block";
+       d.style.display="none";
+       sb.innerHTML=" - ";
+  } else {
+    $D(targetid);
+       d.style.display="block";
+	    h.style.display="none";
+       sb.innerHTML=' + ';
+   }
+}
+</script>
+</html>

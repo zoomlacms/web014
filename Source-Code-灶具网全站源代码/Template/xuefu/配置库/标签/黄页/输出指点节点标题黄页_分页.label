@@ -1,0 +1,29 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>626</LabelID>
+    <LabelName>输出指点节点标题黄页_分页</LabelName>
+    <LabelType>4</LabelType>
+    <LabelCate>黄页</LabelCate>
+    <LabelDesc />
+    <LabelParam>NodeID,2,1,节点ID|UserName,1,1,用户名|TitleNum,30,1,标题长|ShowNum,10,1,显示数|TableName,ZL_Page_kcsz,1,表名</LabelParam>
+    <LabelTable>ZL_CommonModel</LabelTable>
+    <LabelField>CreateTime,GeneralID,Title</LabelField>
+    <LabelWhere>NodeID=@NodeID And Inputer='@UserName' And TableName='@TableName' And Status=99</LabelWhere>
+    <LabelOrder>CreateTime DESC</LabelOrder>
+    <LabelContent>&lt;ul&gt;{Repeate}&lt;li&gt;
+&lt;span&gt;{ZL:FormatDate({Field="CreateTime"/},yyyy-MM-dd)/}&lt;/span&gt;&lt;a href="/page/PageContent.aspx?ItemID={Field="GeneralID"/}&amp;pageid={$GetRequest(pageid)$}" title="{Field="Title"/}"&gt;{ZL:CutText({Field="Title"/},@TitleNum,)/}&lt;/a&gt;&lt;/li&gt;{/Repeate}
+&lt;/ul&gt;
+{ZL.Page/}</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</NewDataSet>

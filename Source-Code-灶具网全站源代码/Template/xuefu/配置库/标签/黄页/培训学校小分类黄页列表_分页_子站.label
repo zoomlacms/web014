@@ -1,0 +1,58 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>822</LabelID>
+    <LabelName>培训学校小分类黄页列表_分页_子站</LabelName>
+    <LabelType>4</LabelType>
+    <LabelCate>黄页</LabelCate>
+    <LabelDesc />
+    <LabelParam>ShowNum,10,1,显示数</LabelParam>
+    <LabelTable>ZL_PageReg left join ZL_Reg_Page on ZL_PageReg.UserID=ZL_Reg_Page.UserID</LabelTable>
+    <LabelField>ZL_PageReg.CompanyName,ZL_PageReg.ID,ZL_PageReg.LOGO,ZL_Reg_Page.address,ZL_Reg_Page.area,ZL_Reg_Page.course,ZL_Reg_Page.pass,ZL_Reg_Page.QQ,ZL_Reg_Page.renzo,ZL_Reg_Page.type,ZL_Reg_Page.UserName</LabelField>
+    <LabelWhere>(type like '%{ZL.Label id="根据字典ID得到字典名" cate="3" gid="{$GetRequest(cate2)$}" /}|{ZL.Label id="根据字典ID得到字典名" cate="3" gid="{$GetRequest(lei)$}" /}%') And ZL_Reg_Page.area like '%{$GetUrldecode({$GetRequest(city)$})$}%' And status=99 </LabelWhere>
+    <LabelOrder>ZL_Reg_Page.pass desc,ZL_Reg_Page.renzo desc,ZL_PageReg.CreationTime DESC</LabelOrder>
+    <LabelContent>{Repeate}
+&lt;div class="list_m1"&gt;
+&lt;script&gt;
+var renzo='{Field="renzo"/}';
+var pass='{Field="pass"/}';
+if(renzo==1|pass==1){
+document.write('&lt;div class="lim1_L"&gt;&lt;a href="/Page/Default.aspx?pageid={Field="ID"/}" target="_blank"&gt;&lt;img src="{ZL:GetPicUrl({Field="LOGO"/})/}" alt="{Field="CompanyName"/}" &gt;&lt;/a&gt;&lt;/div&gt;&lt;div class="lim1_M"&gt;&lt;a href="/Page/Default.aspx?pageid={Field="ID"/}" target="_blank"&gt;{Field="CompanyName"/}&lt;/a&gt;');}
+else{document.write('&lt;div class="lim1_M"&gt;&lt;a href="/Page/Default.aspx?pageid={Field="ID"/}" target="_blank"&gt;{Field="CompanyName"/}&lt;/a&gt;');}
+if(renzo==1)
+{document.write('&lt;span class="renzo"&gt;个人认证&lt;/span&gt;');}
+if(pass==1){
+document.write('&lt;span class="pass"&gt;企业认证&lt;/span&gt;');}
+var vip='{ZL.Label id="根据黄页ID输出VIP值" pid="{Field="ID"/}" /}'
+if(vip==1){
+document.write('&lt;a href="{ZL:GetHotinfo(2)/}?pageid={Field="ID"/}&amp;keepThis=true&amp;TB_iframe=true&amp;height=400&amp;width=500" title="{Field="CompanyName"/}" class="thickbox"&gt;&lt;img src="{$CssDir/}images/eye.gif" alt="全景"/&gt;&lt;/a&gt;');}
+else{document.write('&lt;a href="javascript:void(0)" onclick="pay()"&gt;&lt;img src="{$CssDir/}images/eye.gif" alt="全景"/&gt;&lt;/a&gt;');}
+&lt;/script&gt;
+&lt;br/&gt;
+&lt;p&gt;地址：{Field="address"/}&lt;br/&gt;主营：{Field="type"/}&lt;br/&gt;&lt;a href="/Page/Pagelist.aspx?NodeID=2&amp;pageid={Field="ID"/}" target="_blank"&gt;课程列表&lt;/a&gt;|
+&lt;a href="/Page/Pagelist.aspx?NodeID=9&amp;pageid={Field="ID"/}" target="_blank"&gt;查看点评&lt;/a&gt;|
+&lt;a href="/Page/Pagelist.aspx?NodeID=1&amp;pageid={Field="ID"/}" target="_blank"&gt;机构介绍&lt;/a&gt;&lt;/p&gt;
+&lt;span&gt;课程：{ZL:CutText({Field="course"/},80,)/}&lt;a href="/Page/Pagelist.aspx?NodeID=2&amp;pageid={Field="ID"/}" target="_blank"&gt;更多&gt;&gt;&lt;/a&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class="lim1_R"&gt;
+&lt;div class="lim1RL"&gt;&lt;span id="socre{Field="ID"/}"&gt;{ZL.Label id="学校总评分_列表页数" GeneralID="{Field="ID"/}" /}好评&lt;/span&gt;&lt;br/&gt;{ZL.Label id="学校总评分_列表页图" GeneralID="{Field="ID"/}" /}&lt;br/&gt;&lt;a href="/Page/Pagelist.aspx?NodeID=9&amp;pageid={Field="ID"/}" target="_blank"&gt;&lt;b&gt;{ZL.Label id="学校总评论条数_列表页" GeneralID="{Field="ID"/}" /}&lt;/b&gt;条网友点评&lt;/a&gt;&lt;/div&gt;
+&lt;div class="lim1RR"&gt;浏览数：100&lt;br/&gt;&lt;a href="/Page/Default.aspx?pageid={Field="ID"/}" target="_blank"&gt;&lt;img src="{$CssDir/}images/bott3.jpg" alt="查看详情"&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="clear"&gt;&lt;/div&gt;
+&lt;p class="qqandreply"&gt;&lt;a href="/Page/Pagelist.aspx?NodeID=9&amp;pageid={Field="ID"/}#scolist" target="_blank"&gt;查看评论&lt;/a&gt;&lt;a href="/Page/Pagelist.aspx?NodeID=9&amp;pageid={Field="ID"/}" target="_blank"&gt;我要评论&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+{/Repeate}
+&lt;div class="clear"&gt;&lt;/div&gt;
+{ZL.Page/}</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</NewDataSet>

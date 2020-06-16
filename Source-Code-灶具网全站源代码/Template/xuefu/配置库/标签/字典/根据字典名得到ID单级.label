@@ -1,0 +1,26 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>520</LabelID>
+    <LabelName>根据字典名得到ID单级</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>字典</LabelCate>
+    <LabelDesc />
+    <LabelParam>cate,2,1,类|dicname,包河,1,字典名</LabelParam>
+    <LabelTable>{table1}.dbo.ZL_Datadic</LabelTable>
+    <LabelField>Dicid</LabelField>
+    <LabelWhere>Diccate=@cate And Dicname like '%@dicname%'</LabelWhere>
+    <LabelOrder />
+    <LabelContent>{Field="Dicid"/}</LabelContent>
+    <LabelCount>1</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue>0</Modelvalue>
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</NewDataSet>

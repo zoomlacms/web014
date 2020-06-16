@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>百度编辑器测试文档</title>
+<link href="css/editor.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="base.js"></script>
+</head>
+
+<body>
+<style type="text/css">
+img.down-arrow{cursor:pointer;border:1px solid #fff;}
+img.down-arrow-hover{cursor:pointer;border:1px solid #999;background:#f7f7f7;}
+#nav_extra{width:80px;font-size:12px;text-align:left;padding-bottom:2px;position:absolute;z-index:65535;}
+#nav_extra a{font-size:12px;color:#00c;}
+#nav_extra .top{width:77px;height:21px;font-size:12px;line-height:18px;text-indent:5px;border:1px solid #999;border-bottom:none;background:#fff;position:absolute;z-index:65531;}
+#nav_extra .body{width:77px;line-height:18px;border:1px solid #999;background:#fff;position:absolute;top:20px;z-index:65530;}#nav_extra .body a{width:100%;height:20px;display:block;line-height:20px;text-indent:5px;}
+#nav_extra .body a:hover{background:#e4e4e4;}
+#usrbar #my_home_container{padding:0 7px 2px 5px;}
+</style>
+<script type="text/javascript">
+var Fe=Fe||{version:"20080809",emptyFn:function(){}};
+Fe.G=function(){for(var A=[],B=arguments.length-1;B>-1;B--){
+	var C=arguments[B];A[B]=null;
+if(typeof C=="object"&&C&&C.dom){A[B]=C.dom}else{if((typeof C=="object"&&C&&C.tagName)||C==window||C==document){A[B]=C}else{if(typeof C=="string"&&(C=document.getElementById(C))){A[B]=C}}}}return A.length<2?A[0]:A};Fe.on=function(C,B,A){if(!(C=Fe.G(C))){return C}B=B.replace(/^on/,"").toLowerCase();
+if(C.attachEvent){C[B+A]=function(){A.call(C,window.event)};
+C.attachEvent("on"+B,C[B+A])}else{C.addEventListener(B,A,false)}return C};
+Fe.un=function(C,B,A){if(!(C=Fe.G(C))){return C}B=B.replace(/^on/,"").toLowerCase();if(C.attachEvent){C.detachEvent("on"+B,C[B+A]);C[B+A]=null}else{C.removeEventListener(B,A,false)}return C};
+var G_HIBAR=(function(){
+	var H=document,F,E,C,B=3;function A(K,I,J){K.style.display=C?"none":"block";
+	K.style.left=I+"px";K.style.top=J+"px"}
+	function G(I){C&&G_HIBAR(I)}
+	function D(){F=null;E=null;Fe.un(window,"unload",D)}Fe.on(window,"resize",G);
+	Fe.on(document,"click",G);Fe.on(window,"unload",D);
+	return function(J){(J||window.event).cancelBubble=true;F=F||H.getElementById("usrbar");
+	E=E||H.getElementById("nav_extra");
+	var K=H.getElementById("my_home"),L=F.scrollHeight,I=0;
+	do{I+=K.offsetLeft}while(K=K.offsetParent);
+	I=I-6;
+	A(E,I,B);
+	Fe.G("usrbar").scrollWidth;C=!C}})();
+    </script>
+<style type="text/css">.popb2{padding:10px;line-height:22px;font-size:14px;width:280px;height:230px;margin:0 auto;}#rempassItem{font-size:12px;color:#F00;display:none;}.regButton{padding:2px;height:25px;width:140px;margin:10px 60px;}.f12{font-size:12px;}#rgHandle{text-align:center;font-weight:bold;}.loginItem{width:140px;}</style>
+<script language=javascript src="popup.js"></script>
+<script>wikiConflict.isEdit=1;</script>
+
+
+        <form name="input" method="post" action="" enctype="multipart/form-data">
+        <input name="lemmaTime" type="hidden" id="lemmaTime" value="">
+        <input name="lemmaVersionId" id="lemmaVersionId" type="hidden" value="11406581">
+        
+        <input type="hidden" name="paragraphNum" id="paragraphNum" value="3">
+        <input type="hidden" name="lemmatitle" id="lemmatitle" value="萨科齐" style="behavior:url(#default#savehistory)">
+        <input type="hidden" id='lemmaid' name="lemmaid" value="939017">
+        <input type="hidden" id="extData" value='' name="extData">
+
+        <input type="hidden" value="" name="summaryImgId" id="summaryImgId">
+        <input type="hidden" value="" name="summaryImgInfo" id="summaryImgInfo">
+        <input type="hidden" name="summarySummary" value="" id="summarySummary">
+        <input type="hidden" name="extDataType" value="" id="extDataType">
+        <input type="hidden" name="extDataTypeTemp" value="" id="extDataTypeTemp" />
+        <input type="hidden" value=" 提 交 " name="editlemma">
+		</form>
+<div id="inputShowSummaryDiv" style="padding:0 0 10px;display:none;">
+            <div id="canEditSummary" style="display:none"></div>
+            <div id="cardSummary"></div>
+
+        </div>
+    
+        <div id="inputShowMainInfoDiv" style="display:none;">
+            <div id="canEditMainInfo"></div>
+            <div id="inputMainInfoDivContent"></div>
+        </div>
+    
+        <div style="position:relative">
+            <div id="loading"></div>
+            <!-- 工具栏 -->
+            <div id="toolsHolder">
+                    <div id="tools">
+                        <div id="toolbar"></div>
+
+                        <div class="bg">
+                    </div>
+                </div>
+            </div>
+            <div id="EditorHolder">
+                <div class="tangram_editor_container" style="height:390px"></div>
+            </div>
+            <textarea id="code" name="message" style="display:none;"><div><h2>【萨科齐政策主张】</h2>　　■一、经济与就业<br />　　豁免对超时工作以及社会保险费用的征税；<br />　　减征4%的税收以及社会负担费用，该举措将使得法国国民增加680亿欧元的收入；<br />　　设计一种新的单一劳动合同，雇员的权利将随着时间的延长而增加，这种灵活性将会鼓励企业主雇请更多的工人；<br />　　禁止对高级管理人员实行“黄金降落伞”(即：企业的高级管理层或离任的政府官员在失去他们原来的工作后，在经济上给予其丰厚保障的一种制度安排)安排政策，阻止将股买卖的特权仅限于公司的老板；<br />　　继续将退休年龄维持在60岁，坚持每周35小时工作制，工人们有权拒绝超时工作；<br />　　减少公共部门的工作人员数量，增加公务人员的工资水平，降低政府的公共债务；<br />　　萨科奇所在的人民联盟运动党曾公开承诺，萨科奇当选总统后，在五年时间之内将政府公共债务减少60%，将公共支出的增长水平增加到1.5%。<br />　　■二、法律与移民<br />　<img src="images/imgl2.gif" />　减少对多次犯罪者的量刑标准，增加对青年少犯罪的量刑标准；<br />　　确保法官们对自己做出的决定负责；<br />　　减少非法移民数量，实行选择性的移民政策，以有利于那些具备一定资格的工人进入法国；<br />　　设立专门的移民和国民身份认证机构，使得国民身份认证不再被视为社会的禁忌。<br />　　■三、福利与社会政策<br />　　对交通以及能源部门的退休人员实行更加优厚的养老金政策，同时提高其它部门工作人员的退休待遇；<br />　　允许同性恋者成立民间协会，对那些已经生活在一起的同性恋者实行同样的税收、移民以及社会政策，但不允许这些同性恋者结婚或者收养小孩；<br />　　通过法案使得全体国民享有房屋居住权，对于任何没有住房的法国国民，将在两年内为他们提供居所。<br />　　■四、外交政策<br />　　欧洲：向欧洲中央银行施加压力，要求他们降低欧元汇率，在有效遏制通货膨胀的同时增加经济和就业率；支持欧盟与土耳其之间就建立战略伙伴关系进行协商对话，但不主张土耳其可以获得完整的欧盟成员国资格；暂停一些新国家申请加入欧盟；希望在2009年之前化解欧洲宪法僵局，要求简化欧洲宪法的条款，这些条款包括延长欧盟委员会主席的任期、设立欧盟外交部长、增加就司法以及移民问题进行投票国家数量、提升欧洲议会的权限、给予普通公民向委员会提交政策的权利。<br />　　伊朗：伊朗获得核武器是完全不可以接受的，如果德黑兰执意拒绝遵守联合国的决议，将寻求对伊朗实行更多的惩罚性制裁。<br />　　美国：将与美国建立“深厚、真诚、坚定”的伙伴关系，但同时认为美国在阻止全球气候变暖问题上应该受到谴责，也应该承担更多的义务。<br />　　■五、机构改革<br />　　总统只能连续担任两届；<br />　　总统有权直接在议会发表讲话；<br />　　增强国会在修改政府议案方面的能力；<br />　　在议会上院实行比例代表制；<br />　　政府部长的数量控制在15个以内。<br />　　■六、教育<br />　　法国国内的教育机构将获得更大的自主权；<br />　　进入国家博物馆将全部免费；<br />　　法国国内的大学将获得更大的自主权。<br />　　竞选胜利后，萨科齐向聚集在巴黎市中心的支持者发表演说。他表示，将作全法国人民的总统。“对于那些在此次选举中没有投我一票的民众，我想说，法国只有一个，我希望所有人摒弃政治成见和观点分歧，团结在一起。我郑重承诺，我将做全法国人民的总统。”<br />　　萨科齐将接替希拉克成为法国总统，他将成为二战后出生的首位法国总统。法国总统竞选活动的主要议题是如何改善经济增长、降低年轻人的失业率、移民政策。<br />　　萨科齐还表示，他坚信大欧洲建设事业将继续深入，而美国完全可以相信两国之间的友谊。“我想对法国的欧洲盟友们说，欧洲是我一生的归宿，今夜法国是欧洲最坚定的后盾。”</textarea>
+
+            <span class="gray">
+            <input type="hidden" id="partContentNum" name="partContentNum" value="11092">
+            <input type="hidden" id="curPicNum" name="curPicNum" value="13">
+            <script type='text/javascript'>
+            var g_pcNum = G("partContentNum").value;
+            function setPicNum(){
+              if(editor){editor.maxPicNum = G("curPicNum").value;}
+            }
+            Fe.on(window, "load", setPicNum);
+            </script>
+            </span>
+        </div> 
+        
+        <input id="lemmaclass" name="lemmaclass" value="法国,政坛,总统,法兰西第五共和国" type="hidden">
+        <script>var templateGuide = templateGuide || {};templateGuide.textEditType='part'</script> 
+        
+    
+        <div class="btn">
+            
+            <input type="hidden" value=" 提 交 " name="editlemma">
+            <input type="button" value="提 交" class="submit" onclick="onclickLemmaSubmitListener();formValidate(3,1)">
+
+        </div>
+        
+        
+
+        </form>
+	</div>
+</div>
+<!-- 插入表格 -->
+<div class="bd-menu-inserttable" id="bdMenuInsertTable" role="menu">
+    <div class="bd-dimension-picker" id="pickerHolder">
+        <div id="pickerArea">
+            <div class="bd-dimension-picker-unhighlighted" style="width: 10em; height: 10em;"></div>
+
+            <div class="bd-dimension-picker-highlighted" style="width: 0em; height: 0em;" id="pickerHighlighted"></div>
+        </div>
+        <div class="bd-dimension-picker-status">
+            <span style="float:left;font-size:12px" id="pickerStatus"><span id="columnCount">0</span>列 x <span id="rowCount">0</span>行</span>
+            <span style="float:right;"><a href="#" onclick="setTablePanel.insertMoreTable();return false;" id="insertMoreTable" style="text-decoration:none;font-size:12px;">插入更多</a></span>
+        </div>
+
+    </div>
+</div>
+
+<form name="pre" method="post" action=" /preview/" target="_blank">
+   <input type="hidden" name="pretitle" value=""/>
+   <input type="hidden" name="prelemma" value=""/>
+   <input type="hidden" name="pretag" value=""/>
+   <input type="hidden" name="prepic" value=""/>
+   <input type="hidden" name="preref" value=""/>
+   <input type="hidden" name="preview" value="preview">
+   <input type="hidden" name="preBeforeLemma" id="preBeforeLemma" value="">
+   <input type="hidden" name="preEndLemma" id="preEndLemma" value="">
+   <input type="hidden" name="preFlag" id="preFlag" value="">
+   <input type="hidden" value="" name="preExtData" />
+   <input type="hidden" value="" name="preSummaryImgId" />
+   <input type="hidden" value="" name="preSummaryImgInfo" />
+   <input type="hidden" name="preSummarySummary" value="" />
+   <input type="hidden" name="preExtDataType" value="" />
+   <div id="refData4Preview" style="display:none"></div>
+
+</form>
+
+<br clear="all">
+
+<script type="text/javascript" src="core.js"></script>
+<script type="text/javascript" src="common.js"></script>
+
+</body>
+</html>

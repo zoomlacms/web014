@@ -1,0 +1,30 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>718</LabelID>
+    <LabelName>一天内团购搜索结果数量统计</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>商城</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable>ZL_Commodities left join ZL_P_Shop on ZL_Commodities.ItemID=ZL_P_Shop.ID</LabelTable>
+    <LabelField>count ( ZL_Commodities.ID ) as num</LabelField>
+    <LabelWhere>nodeid in(select nodeid from zl_node
+where parentid=3 or nodeid=3 or parentid in (select nodeid from zl_node where 
+parentid=3)  or  parentid in (select nodeid  from zl_node 
+where parentid in (select nodeid from zl_node where parentid=3))
+) and sales=1 and Proname like '%{$GetUrldecode({$GetRequest(Keyword)$})$}%' and datediff(day,[AddTime],getdate())=0</LabelWhere>
+    <LabelOrder />
+    <LabelContent>{Field="num"/}</LabelContent>
+    <LabelCount>0</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>大于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+  </Table>
+</NewDataSet>
